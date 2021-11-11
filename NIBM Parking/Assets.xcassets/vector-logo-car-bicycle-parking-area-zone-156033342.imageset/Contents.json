@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "vector-logo-car-bicycle-parking-area-zone-156033342.jpeg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "vector-logo-car-bicycle-parking-area-zone-156033342@2x.jpeg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "vector-logo-car-bicycle-parking-area-zone-156033342@3x.jpeg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
