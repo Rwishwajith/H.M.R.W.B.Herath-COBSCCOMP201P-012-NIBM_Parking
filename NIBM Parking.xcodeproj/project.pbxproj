@@ -99,10 +99,12 @@
 		6940215B273CFCAD004615B6 /* NIBM Parking */ = {
 			isa = PBXGroup;
 			children = (
+				6940218E273D2951004615B6 /* Controller */,
+				6940218D273D293D004615B6 /* Model */,
+				6940218C273D292F004615B6 /* Views */,
 				6940215C273CFCAD004615B6 /* AppDelegate.swift */,
 				6940215E273CFCAD004615B6 /* SceneDelegate.swift */,
 				69402160273CFCAD004615B6 /* ViewController.swift */,
-				69402162273CFCAD004615B6 /* Main.storyboard */,
 				69402165273CFCB1004615B6 /* Assets.xcassets */,
 				69402167273CFCB1004615B6 /* LaunchScreen.storyboard */,
 				6940216A273CFCB1004615B6 /* Info.plist */,
@@ -126,6 +128,28 @@
 				69402180273CFCB1004615B6 /* Info.plist */,
 			);
 			path = "NIBM ParkingUITests";
+			sourceTree = "<group>";
+		};
+		6940218C273D292F004615B6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				69402162273CFCAD004615B6 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6940218D273D293D004615B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6940218E273D2951004615B6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
