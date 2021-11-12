@@ -12,9 +12,14 @@
 		692797D1273E4B2900A80E1F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 692797D0273E4B2900A80E1F /* GoogleService-Info.plist */; };
 		692797D2273E4B2900A80E1F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 692797D0273E4B2900A80E1F /* GoogleService-Info.plist */; };
 		692797D3273E4B2900A80E1F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 692797D0273E4B2900A80E1F /* GoogleService-Info.plist */; };
+		692797D5273E730700A80E1F /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692797D4273E730700A80E1F /* SigninViewController.swift */; };
+		692797D6273E730700A80E1F /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692797D4273E730700A80E1F /* SigninViewController.swift */; };
+		692797D7273E730700A80E1F /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692797D4273E730700A80E1F /* SigninViewController.swift */; };
+		692797DD273E76D100A80E1F /* EntityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692797DC273E76D100A80E1F /* EntityModel.swift */; };
+		692797DE273E76D100A80E1F /* EntityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692797DC273E76D100A80E1F /* EntityModel.swift */; };
+		692797DF273E76D100A80E1F /* EntityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692797DC273E76D100A80E1F /* EntityModel.swift */; };
 		6940215D273CFCAD004615B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6940215C273CFCAD004615B6 /* AppDelegate.swift */; };
 		6940215F273CFCAD004615B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6940215E273CFCAD004615B6 /* SceneDelegate.swift */; };
-		69402161273CFCAD004615B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69402160273CFCAD004615B6 /* ViewController.swift */; };
 		69402164273CFCAD004615B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69402162273CFCAD004615B6 /* Main.storyboard */; };
 		69402166273CFCB1004615B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69402165273CFCB1004615B6 /* Assets.xcassets */; };
 		69402169273CFCB1004615B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69402167273CFCB1004615B6 /* LaunchScreen.storyboard */; };
@@ -47,10 +52,11 @@
 		56488E386470CC99A89F4E06 /* Pods-NIBM Parking-NIBM ParkingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBM Parking-NIBM ParkingUITests.debug.xcconfig"; path = "Target Support Files/Pods-NIBM Parking-NIBM ParkingUITests/Pods-NIBM Parking-NIBM ParkingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5A3F39B9C8917B23FC6C9812 /* Pods_NIBM_Parking_NIBM_ParkingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NIBM_Parking_NIBM_ParkingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		692797D0273E4B2900A80E1F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		692797D4273E730700A80E1F /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
+		692797DC273E76D100A80E1F /* EntityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityModel.swift; sourceTree = "<group>"; };
 		69402159273CFCAD004615B6 /* NIBM Parking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NIBM Parking.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6940215C273CFCAD004615B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6940215E273CFCAD004615B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		69402160273CFCAD004615B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		69402163273CFCAD004615B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		69402165273CFCB1004615B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69402168273CFCB1004615B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -125,7 +131,6 @@
 				6940218C273D292F004615B6 /* Views */,
 				6940215C273CFCAD004615B6 /* AppDelegate.swift */,
 				6940215E273CFCAD004615B6 /* SceneDelegate.swift */,
-				69402160273CFCAD004615B6 /* ViewController.swift */,
 				69402165273CFCB1004615B6 /* Assets.xcassets */,
 				69402167273CFCB1004615B6 /* LaunchScreen.storyboard */,
 				6940216A273CFCB1004615B6 /* Info.plist */,
@@ -163,6 +168,7 @@
 		6940218D273D293D004615B6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				692797DC273E76D100A80E1F /* EntityModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -170,6 +176,7 @@
 		6940218E273D2951004615B6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				692797D4273E730700A80E1F /* SigninViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -438,8 +445,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69402161273CFCAD004615B6 /* ViewController.swift in Sources */,
+				692797D5273E730700A80E1F /* SigninViewController.swift in Sources */,
 				6940215D273CFCAD004615B6 /* AppDelegate.swift in Sources */,
+				692797DD273E76D100A80E1F /* EntityModel.swift in Sources */,
 				6940215F273CFCAD004615B6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -448,6 +456,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				692797DE273E76D100A80E1F /* EntityModel.swift in Sources */,
+				692797D6273E730700A80E1F /* SigninViewController.swift in Sources */,
 				69402174273CFCB1004615B6 /* NIBM_ParkingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,6 +466,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				692797DF273E76D100A80E1F /* EntityModel.swift in Sources */,
+				692797D7273E730700A80E1F /* SigninViewController.swift in Sources */,
 				6940217F273CFCB1004615B6 /* NIBM_ParkingUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
