@@ -2,7 +2,7 @@
 //  NIBM_ParkingUITests.swift
 //  NIBM ParkingUITests
 //
-//  Created by Dilan Pramodya on 2021-11-11.
+//  Created by Ruchira Wishwajith on 2021-11-11.
 //
 
 import XCTest
