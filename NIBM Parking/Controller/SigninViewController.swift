@@ -23,45 +23,26 @@ class SigninViewController: UIViewController
     
     }
     
-
     @IBAction func onSignInPressed(_ sender: UIButton) {
-        if inputeValidation(){
-            userAuthentication(password: txtPassword.text!, email: txtEmail.text!)
+        
+        if !inputValidator.emailValidity(email: txtEmail.text ?? "")
+        {
+            Loaf("Invalid Email Address", state: .error, sender: self).show()
+            return
         }
-        else{
-            print("Invalid data found in the given details")
-            
+        
+        if !inputValidator.passwordValidity(password: txtPassword.text ?? "", minLenght: 8, maxLenght: 60)
+        {
+            Loaf("Invalid Password", state: .error, sender: self).show()
+            return
         }
+        
+        userAuthentication(password: txtPassword.text!, email: txtEmail.text!)
+        
+    
     }
     //Validate input using optional bibding
-    func inputeValidation() -> Bool
-    {
-        guard let useremail = txtEmail.text else {
-            print("Email cannot be Empty")
-            Loaf("Email cannot be Empty", state: .error, sender: self).show()
-            return false
-        }
-        
-        guard let userpassword = txtPassword.text else {
-            print("Password Cannot Be Empty")
-            Loaf("Password Cannot Be Empty", state: .error, sender: self).show()
-            return false
-        }
-        
-        if useremail.count < 10
-        {
-            print("Please Enter a valid email")
-            Loaf("Please Enter a valid email", state: .error, sender: self).show()
-            return false
-        }
-        if userpassword.count < 8
-        {
-            print("Password lenght cannot be less than 8 characters")
-            Loaf("Password lenght cannot be less than 8 characters", state: .error, sender: self).show()
-            return false
-        }
-        return true
-    }
+    
     
     func userAuthentication (password: String, email: String)
     {
