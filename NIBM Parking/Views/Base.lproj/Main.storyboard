@@ -161,10 +161,10 @@
             </objects>
             <point key="canvasLocation" x="37.681159420289859" y="48.913043478260875"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="gB0-Eq-tS3">
             <objects>
-                <viewController id="xkq-5o-ALr" sceneMemberID="viewController">
+                <viewController id="xkq-5o-ALr" customClass="SignUpViewController" customModule="NIBM_Parking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qXe-r8-7e5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -176,7 +176,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="900"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="753" text="Enter Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w12-eb-Q6z">
-                                                <rect key="frame" x="40" y="247" width="113" height="18"/>
+                                                <rect key="frame" x="39.999999999999993" y="247" width="110.33333333333331" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -213,8 +213,8 @@
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="753" text="Enter NIBM ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZm-Jd-hgB">
-                                                <rect key="frame" x="40" y="460" width="113" height="18"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="753" text="Enter Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZm-Jd-hgB">
+                                                <rect key="frame" x="39.999999999999993" y="460" width="110.33333333333331" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -222,7 +222,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="254" verticalCompressionResistancePriority="753" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="caT-RG-rE4">
                                                 <rect key="frame" x="40" y="481" width="334" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="752" layoutMarginsFollowReadableWidth="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhu-Cc-WLH">
                                                 <rect key="frame" x="40" y="693" width="334" height="35"/>
@@ -242,10 +242,11 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="onSignInPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oGS-LJ-C0X"/>
+                                                    <action selector="onSignUpPressed:" destination="xkq-5o-ALr" eventType="touchUpInside" id="FLw-qT-228"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="753" text="Enter Vehical No" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4oJ-Mf-Sm8">
-                                                <rect key="frame" x="40" y="531" width="113" height="18"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="753" text="Enter NIBM ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4oJ-Mf-Sm8">
+                                                <rect key="frame" x="39.999999999999993" y="531" width="110.33333333333331" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -253,15 +254,15 @@
                                             <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" verticalCompressionResistancePriority="753" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="diL-VD-4t5">
                                                 <rect key="frame" x="40" y="552" width="334" height="40"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" textContentType="name"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="254" verticalCompressionResistancePriority="753" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hod-j0-g75">
                                                 <rect key="frame" x="40" y="410" width="334" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="753" text="Enter Vehical Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfg-sj-43G">
-                                                <rect key="frame" x="40" y="608" width="127" height="18"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" verticalCompressionResistancePriority="753" text="Enter Vehical Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfg-sj-43G">
+                                                <rect key="frame" x="40" y="608" width="149" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -269,7 +270,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" verticalCompressionResistancePriority="753" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XKq-1p-ZOR">
                                                 <rect key="frame" x="40" y="629" width="334" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" textContentType="name"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" verticalCompressionResistancePriority="755" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFn-7q-XRT">
                                                 <rect key="frame" x="80" y="745" width="254" height="30"/>
@@ -284,14 +285,14 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W7H-B6-XG6">
                                                 <rect key="frame" x="217" y="808" width="58" height="32"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="58" id="TUi-km-ZYp"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="58" id="TUi-km-ZYp"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <state key="normal" title="Sign in">
                                                     <color key="titleColor" systemColor="linkColor"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="d9a-ga-jvJ"/>
+                                                    <action selector="signUpPressed:" destination="xkq-5o-ALr" eventType="touchUpInside" id="LA5-i1-xJc"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -348,6 +349,7 @@
                                             <constraint firstItem="4oJ-Mf-Sm8" firstAttribute="top" secondItem="caT-RG-rE4" secondAttribute="bottom" constant="16" id="i3s-T8-2js"/>
                                             <constraint firstItem="vZm-Jd-hgB" firstAttribute="trailing" secondItem="w12-eb-Q6z" secondAttribute="trailing" id="lf2-hZ-Gul"/>
                                             <constraint firstItem="Jsn-nR-Lbe" firstAttribute="leading" secondItem="XIR-28-2mM" secondAttribute="leading" id="lih-Cp-VBj"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="W7H-B6-XG6" secondAttribute="trailing" constant="20" symbolic="YES" id="m1L-jN-eCd"/>
                                             <constraint firstItem="fNb-gM-Xuq" firstAttribute="top" secondItem="Jsn-nR-Lbe" secondAttribute="bottom" constant="16" id="oDt-he-mui"/>
                                             <constraint firstItem="w12-eb-Q6z" firstAttribute="leading" secondItem="0tc-Ik-dQk" secondAttribute="leading" constant="40" id="okQ-FX-Jgs"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hFn-7q-XRT" secondAttribute="trailing" constant="20" symbolic="YES" id="pAk-ym-qrq"/>
@@ -397,6 +399,14 @@
                             <constraint firstAttribute="trailing" secondItem="9If-bp-472" secondAttribute="trailing" id="iTi-Uq-x3w"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="txtemail" destination="Jsn-nR-Lbe" id="lew-RA-KeJ"/>
+                        <outlet property="txtnibmid" destination="diL-VD-4t5" id="BZu-Rp-TTR"/>
+                        <outlet property="txtpassword" destination="caT-RG-rE4" id="gNq-mQ-Mpc"/>
+                        <outlet property="txtphonenumber" destination="Hod-j0-g75" id="vF8-Xf-sjA"/>
+                        <outlet property="txtusername" destination="RHg-ri-fCC" id="4ys-i3-uM7"/>
+                        <outlet property="txtvehicalNumber" destination="XKq-1p-ZOR" id="A13-F7-05N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2OT-ru-5sE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
