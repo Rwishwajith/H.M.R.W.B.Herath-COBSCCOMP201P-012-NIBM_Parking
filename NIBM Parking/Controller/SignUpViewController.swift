@@ -44,93 +44,46 @@ class SignUpViewController: UIViewController {
 
     @IBAction func onSignUpPressed(_ sender: UIButton)
     {
-     if inputValidation()
-     {
+        
+        if !inputValidator.nameValidity(name: txtusername.text ?? "")
+        {
+            Loaf("Username is Invalid", state: .error, sender: self).show()
+            return
+        }
+        
+        if !inputValidator.emailValidity(email: txtemail.text ?? "")
+        {
+            Loaf("Email address is invalid", state: .error, sender: self).show()
+            return
+        }
+        if !inputValidator.mobileValidity(mobileNumber: txtphonenumber.text ?? "")
+        {
+            Loaf("Mobile Number is in invalid format", state: .error, sender: self).show()
+            return
+        }
+        
+        if !inputValidator.passwordValidity(password: txtpassword.text ?? "", minLenght: 8, maxLenght: 60)
+        {
+            Loaf("Password is in invalid format", state: .error, sender: self).show()
+            return
+        }
+        if !inputValidator.nibmIDValidity(nibmID: txtnibmid.text ?? "")
+        {
+            Loaf("NIBM ID is invalid", state: .error, sender: self).show()
+            return
+        }
+        if !inputValidator.vehicalnumberValidity(vehicalNumber: txtvehicalNumber.text ?? "")
+        {
+            Loaf("Vehical Number is invalid", state: .error, sender: self).show()
+            return
+        }
+        
         regsiteruser(email: txtemail.text!, password: txtpassword.text!)
-     }
-     else
-     {
-        print("Invalid data found in the given details")
-     }
+        
     }
     @IBAction func signUpPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
     
    
-    
-    func inputValidation() -> Bool
-    {
-        guard let username = txtusername.text else {
-            print("Username cannot be empty")
-            Loaf("Username cannot be empty", state: .error, sender: self).show()
-            return false
-        }
-        
-        guard let email = txtemail.text else {
-            print("Email cannot be empty")
-            Loaf("Email cannot be empty", state: .error, sender: self).show()
-            return false
-        }
-        guard let usermobile = txtphonenumber.text else {
-            print("Mobile number cannot be empty")
-            Loaf("Mobile number cannot be empty", state: .error, sender: self).show()
-            return false
-        }
-        guard let nibmid = txtnibmid.text else {
-            print("NIBM ID cannot be empty")
-            Loaf("NIBM ID cannot be empty", state: .error, sender: self).show()
-            return false
-        }
-        guard let vehicalid = txtvehicalNumber.text else {
-            print("Vehical Number cannot be empty")
-            Loaf("Vehical Number cannot be empty", state: .error, sender: self).show()
-            return false
-        }
-        guard let password = txtpassword.text else {
-            print("Password cannot be empty")
-            Loaf("Password cannot be empty", state: .error, sender: self).show()
-            return false
-        }
-        
-        if username.count<5
-        {
-            print("Enter a valid Username")
-            Loaf("Enter a valid Username", state: .error, sender: self).show()
-            return false
-        }
-        if email.count<10
-        {
-            print("Enter a valid Email Address")
-            Loaf("Enter a valid Email Address", state: .error, sender: self).show()
-            return false
-        }
-        if usermobile.count<10
-        {
-            print("Enter a valid Mobile Number")
-            Loaf("Enter a valid Mobile Number", state: .error, sender: self).show()
-            return false
-        }
-        if nibmid.count<12
-        {
-            print("Enter a valid NIBM ID")
-            Loaf("Enter a valid NIBM ID", state: .error, sender: self).show()
-            return false
-        }
-        if vehicalid.count<5
-        {
-            print("Enter a valid Vehical ID")
-            Loaf("Enter a valid Vehical ID", state: .error, sender: self).show()
-            return false
-        }
-        if password.count<8
-        {
-            print("Enter a valid Password")
-            Loaf("Password lenght cannot be less than 8 characters", state: .error, sender: self).show()
-            return false
-        }
-        
-        return true
-    }
-
 }
