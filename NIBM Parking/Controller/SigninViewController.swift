@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import Loaf
 
 class SigninViewController: UIViewController
 {
@@ -29,6 +30,7 @@ class SigninViewController: UIViewController
         }
         else{
             print("Invalid data found in the given details")
+            
         }
     }
     //Validate input using optional bibding
@@ -36,22 +38,26 @@ class SigninViewController: UIViewController
     {
         guard let useremail = txtEmail.text else {
             print("Email cannot be Empty")
+            Loaf("Email cannot be Empty", state: .error, sender: self).show()
             return false
         }
         
         guard let userpassword = txtPassword.text else {
             print("Password Cannot Be Empty")
+            Loaf("Password Cannot Be Empty", state: .error, sender: self).show()
             return false
         }
         
         if useremail.count < 10
         {
             print("Please Enter a valid email")
+            Loaf("Please Enter a valid email", state: .error, sender: self).show()
             return false
         }
         if userpassword.count < 8
         {
             print("Password lenght cannot be less than 8 characters")
+            Loaf("Password lenght cannot be less than 8 characters", state: .error, sender: self).show()
             return false
         }
         return true
@@ -65,11 +71,15 @@ class SigninViewController: UIViewController
             if let error = error
             {
                 print(error.localizedDescription)
+                Loaf("Invalid Username and Password", state: .error, sender: self).show()
+
                 return
             }
             //To save the login Staet
             let sessionControl = sessionControl()
             sessionControl.userLoginSave()
+            
+            self.performSegue(withIdentifier: "SignIntoHome", sender: nil)
             
         }
     }
