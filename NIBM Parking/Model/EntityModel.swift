@@ -14,7 +14,7 @@ struct PakingUser
     var Usermobilenumber: Int
     var UserPassword: String
     var NIBMRegNumber: String
-    
+    var VehicalNumber: String
     
 }
 

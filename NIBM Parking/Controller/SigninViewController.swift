@@ -67,11 +67,10 @@ class SigninViewController: UIViewController
                 print(error.localizedDescription)
                 return
             }
-            if let output = authResult
-            {
-                print("Email: \(output.user.email ?? "is failed to retrive")")
-                
-            }
+            //To save the login Staet
+            let sessionControl = sessionControl()
+            sessionControl.userLoginSave()
+            
         }
     }
 }

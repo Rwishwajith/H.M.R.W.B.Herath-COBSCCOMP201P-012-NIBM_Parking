@@ -28,6 +28,9 @@
 		6944BE712743F87600C20A62 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6944BE702743F87600C20A62 /* SignUpViewController.swift */; };
 		6944BE722743F87600C20A62 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6944BE702743F87600C20A62 /* SignUpViewController.swift */; };
 		6944BE732743F87600C20A62 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6944BE702743F87600C20A62 /* SignUpViewController.swift */; };
+		6944BE772744298400C20A62 /* sessionControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6944BE762744298400C20A62 /* sessionControl.swift */; };
+		6944BE782744298400C20A62 /* sessionControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6944BE762744298400C20A62 /* sessionControl.swift */; };
+		6944BE792744298400C20A62 /* sessionControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6944BE762744298400C20A62 /* sessionControl.swift */; };
 		C6DA03571A8D771914C1B7B0 /* Pods_NIBM_ParkingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51B43CF377E13ED0DBDB9B57 /* Pods_NIBM_ParkingTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +74,7 @@
 		6940217E273CFCB1004615B6 /* NIBM_ParkingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NIBM_ParkingUITests.swift; sourceTree = "<group>"; };
 		69402180273CFCB1004615B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6944BE702743F87600C20A62 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		6944BE762744298400C20A62 /* sessionControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sessionControl.swift; sourceTree = "<group>"; };
 		8D763FBCB2E9BB2A2CDAF9D6 /* Pods-NIBM ParkingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBM ParkingTests.release.xcconfig"; path = "Target Support Files/Pods-NIBM ParkingTests/Pods-NIBM ParkingTests.release.xcconfig"; sourceTree = "<group>"; };
 		9AEBCCB605C2BDE7C6DC0743 /* Pods-NIBM Parking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBM Parking.debug.xcconfig"; path = "Target Support Files/Pods-NIBM Parking/Pods-NIBM Parking.debug.xcconfig"; sourceTree = "<group>"; };
 		A469FBA86ED89EAF68A8D092 /* Pods-NIBM Parking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBM Parking.release.xcconfig"; path = "Target Support Files/Pods-NIBM Parking/Pods-NIBM Parking.release.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +134,7 @@
 		6940215B273CFCAD004615B6 /* NIBM Parking */ = {
 			isa = PBXGroup;
 			children = (
+				6944BE742744294700C20A62 /* Util */,
 				6940218E273D2951004615B6 /* Controller */,
 				6940218D273D293D004615B6 /* Model */,
 				6940218C273D292F004615B6 /* Views */,
@@ -184,6 +189,14 @@
 				6944BE702743F87600C20A62 /* SignUpViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		6944BE742744294700C20A62 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				6944BE762744298400C20A62 /* sessionControl.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 		C61C1BEC01383964B10A6D04 /* Pods */ = {
@@ -452,6 +465,7 @@
 			files = (
 				692797D5273E730700A80E1F /* SigninViewController.swift in Sources */,
 				6940215D273CFCAD004615B6 /* AppDelegate.swift in Sources */,
+				6944BE772744298400C20A62 /* sessionControl.swift in Sources */,
 				692797DD273E76D100A80E1F /* EntityModel.swift in Sources */,
 				6940215F273CFCAD004615B6 /* SceneDelegate.swift in Sources */,
 				6944BE712743F87600C20A62 /* SignUpViewController.swift in Sources */,
@@ -463,6 +477,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				692797DE273E76D100A80E1F /* EntityModel.swift in Sources */,
+				6944BE782744298400C20A62 /* sessionControl.swift in Sources */,
 				692797D6273E730700A80E1F /* SigninViewController.swift in Sources */,
 				6944BE722743F87600C20A62 /* SignUpViewController.swift in Sources */,
 				69402174273CFCB1004615B6 /* NIBM_ParkingTests.swift in Sources */,
@@ -474,6 +489,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				692797DF273E76D100A80E1F /* EntityModel.swift in Sources */,
+				6944BE792744298400C20A62 /* sessionControl.swift in Sources */,
 				692797D7273E730700A80E1F /* SigninViewController.swift in Sources */,
 				6944BE732743F87600C20A62 /* SignUpViewController.swift in Sources */,
 				6940217F273CFCB1004615B6 /* NIBM_ParkingUITests.swift in Sources */,
