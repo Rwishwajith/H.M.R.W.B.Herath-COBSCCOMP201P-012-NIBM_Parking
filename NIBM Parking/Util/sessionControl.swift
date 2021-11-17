@@ -15,7 +15,7 @@ class sessionControl
        
     }
     
-    func userLoginClear(PakingUser: PakingUser)
+    func userLoginClear()
     {
         UserDefaults.standard.setValue(true, forKey: "IS_LOGGED")
     }
