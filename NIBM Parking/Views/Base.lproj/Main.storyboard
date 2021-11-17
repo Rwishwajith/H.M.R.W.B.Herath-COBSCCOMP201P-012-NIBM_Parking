@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qSa-Ck-TAO">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -9,6 +9,65 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="dhe-WE-ekw">
+            <objects>
+                <viewController id="qSa-Ck-TAO" customClass="SplashViewController" customModule="NIBM_Parking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CaO-7u-QGK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="KYp-Ah-rwR">
+                                <rect key="frame" x="131" y="616" width="152" height="90"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NIBM PARKING " textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="14" adjustsLetterSpacingToFitWidth="YES" highlighted="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DR7-4n-33F">
+                                <rect key="frame" x="39.333333333333343" y="69" width="335.33333333333326" height="59.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="49"/>
+                                <color key="textColor" systemColor="linkColor"/>
+                                <color key="highlightedColor" name="AccentColor"/>
+                                <color key="shadowColor" red="0.35934478040000001" green="0.7122603059" blue="0.92160135509999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="737" image="vector-logo-car-bicycle-parking-area-zone-156033342" translatesAutoresizingMaskIntoConstraints="NO" id="EPb-qb-itp">
+                                <rect key="frame" x="20" y="170" width="374" height="396"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="396" id="Vc6-Cn-u0q"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powerd by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rox-KK-h7g">
+                                <rect key="frame" x="73" y="627" width="80" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="r8G-2q-IJF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KYp-Ah-rwR" firstAttribute="centerX" secondItem="DR7-4n-33F" secondAttribute="centerX" id="3DT-VF-Hg8"/>
+                            <constraint firstItem="r8G-2q-IJF" firstAttribute="bottom" secondItem="Rox-KK-h7g" secondAttribute="bottom" constant="88" id="3dL-VG-QQy"/>
+                            <constraint firstItem="r8G-2q-IJF" firstAttribute="trailing" secondItem="KYp-Ah-rwR" secondAttribute="trailing" constant="131" id="8PD-kE-CTT"/>
+                            <constraint firstItem="Rox-KK-h7g" firstAttribute="leading" secondItem="r8G-2q-IJF" secondAttribute="leading" constant="73" id="FEb-xy-7yX"/>
+                            <constraint firstItem="EPb-qb-itp" firstAttribute="leading" secondItem="r8G-2q-IJF" secondAttribute="leading" constant="20" id="HOH-iN-91c"/>
+                            <constraint firstItem="EPb-qb-itp" firstAttribute="centerY" secondItem="CaO-7u-QGK" secondAttribute="centerY" id="MWu-xK-idG"/>
+                            <constraint firstItem="EPb-qb-itp" firstAttribute="centerX" secondItem="CaO-7u-QGK" secondAttribute="centerX" id="SaL-LT-bKM"/>
+                            <constraint firstItem="KYp-Ah-rwR" firstAttribute="top" secondItem="EPb-qb-itp" secondAttribute="bottom" constant="50" id="XjG-yl-62G"/>
+                            <constraint firstItem="r8G-2q-IJF" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Rox-KK-h7g" secondAttribute="trailing" symbolic="YES" id="d7i-RI-kCD"/>
+                            <constraint firstItem="r8G-2q-IJF" firstAttribute="bottom" secondItem="KYp-Ah-rwR" secondAttribute="bottom" constant="30" id="def-yQ-9Mm"/>
+                            <constraint firstItem="KYp-Ah-rwR" firstAttribute="leading" secondItem="r8G-2q-IJF" secondAttribute="leading" constant="131" id="jaD-C8-aRv"/>
+                            <constraint firstItem="r8G-2q-IJF" firstAttribute="trailing" secondItem="EPb-qb-itp" secondAttribute="trailing" constant="20" id="naA-6W-etT"/>
+                            <constraint firstItem="DR7-4n-33F" firstAttribute="top" secondItem="r8G-2q-IJF" secondAttribute="top" constant="69" id="yxq-UK-Sg7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="splashtoLogIn" modalPresentationStyle="fullScreen" id="sbI-JT-kCl"/>
+                        <segue destination="dSx-B3-pra" kind="presentation" identifier="splashToHome" modalPresentationStyle="fullScreen" id="LV1-In-ng8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hq4-yp-MiF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-935" y="355"/>
+        </scene>
         <!--Signin View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -181,6 +240,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="EGT-G1-VQ8" firstAttribute="top" secondItem="Wsh-kI-SGl" secondAttribute="top" constant="20" id="3VM-xe-xbb"/>
+                            <constraint firstItem="Wsh-kI-SGl" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="EGT-G1-VQ8" secondAttribute="trailing" symbolic="YES" id="BhC-Im-oVn"/>
                             <constraint firstItem="EGT-G1-VQ8" firstAttribute="leading" secondItem="Wsh-kI-SGl" secondAttribute="leading" constant="20" id="oMN-q6-w1u"/>
                         </constraints>
                     </view>
@@ -441,6 +501,9 @@
             <point key="canvasLocation" x="786.95652173913049" y="48.913043478260875"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="LV1-In-ng8"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="logo" width="300" height="101"/>
         <image name="vector-logo-car-bicycle-parking-area-zone-156033342" width="266.66665649414062" height="266.66665649414062"/>
