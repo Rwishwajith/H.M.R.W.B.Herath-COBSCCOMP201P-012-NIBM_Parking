@@ -42,6 +42,12 @@ class SigninViewController: UIViewController
         
     
     }
+    
+    @IBAction func IsForgetPassowrdPressed(_ sender: Any) {
+        self.performSegue(withIdentifier: "signInToForgetPassword", sender: nil)
+        
+    }
+    
    //Get user login data up SignUp
     func retriveuserData (email: String)
     {
