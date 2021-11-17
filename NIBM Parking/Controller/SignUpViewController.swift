@@ -10,7 +10,9 @@ import Firebase
 import Loaf
 
 class SignUpViewController: UIViewController {
-
+    
+  
+    
     @IBOutlet weak var txtusername: UITextField!
     @IBOutlet weak var txtemail: UITextField!
     @IBOutlet weak var txtphonenumber: UITextField!
@@ -18,30 +20,65 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var txtnibmid: UITextField!
     @IBOutlet weak var txtvehicalNumber: UITextField!
     
+    var ref: DatabaseReference!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ref = Database.database().reference()
 
         // Do any additional setup after loading the view.
     }
     
-    func regsiteruser(email: String, password: String)
+    func regsiteruser(user : PakingUser)
     {
-        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+        Auth.auth().createUser(withEmail: user.UserEmail, password: user.UserPassword) { authResult, error in
             if let error = error{
                 print(error.localizedDescription)
                 Loaf("User Registration Failed!", state: .error, sender: self).show()
                 return
             }
-            if let result = authResult
+            
+            self.saveuserdataDatabase(user: user)
+        }
+    }
+    
+    //Save data into the Database
+    func saveuserdataDatabase(user : PakingUser)
+    {
+        
+        let userData =
+        [
+            "userName" : user.Username,
+            "userEmail" : user.UserEmail,
+            "userMobile" : user.Usermobilenumber,
+            "userPassword" : user.UserPassword,
+            "nibmID" : user.NIBMRegNumber,
+            "userVehical" : user.VehicalNumber
+        ]
+        
+        self.ref.child("users").child(user.UserEmail.replacingOccurrences(of: "@", with: "_").replacingOccurrences(of: ".", with: "_")).setValue(userData)
+        {
+            (error, ref) in
+            
+            if let error = error
             {
-                print ("New User Registerd: \(result.user.email ?? "Cannot be found")")
-                Loaf("Registration Successfull", state: .success, sender: self).show()
-
+                print(error.localizedDescription)
+                Loaf("Failed to save User data to the Database", state: .error, sender: self).show()
+                return
+            }
+            Loaf("User data saved to the Database", state: .success, sender: self).show()
+            {
+                type in
+                self.dismiss(animated: true, completion: nil)
             }
             
         }
+        
     }
-
+    
+    
+    
     @IBAction func onSignUpPressed(_ sender: UIButton)
     {
         
@@ -78,7 +115,9 @@ class SignUpViewController: UIViewController {
             return
         }
         
-        regsiteruser(email: txtemail.text!, password: txtpassword.text!)
+        let user = PakingUser(Username: txtusername.text ?? "", UserEmail: txtemail.text ?? "", Usermobilenumber: txtphonenumber.text ?? "", UserPassword: txtpassword.text ?? "", NIBMRegNumber: txtnibmid.text ?? "", VehicalNumber: txtvehicalNumber.text ?? "")
+        
+        regsiteruser(user: user)
         
     }
     @IBAction func signUpPressed(_ sender: UIButton) {
