@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -49,6 +49,19 @@
 		6944BE7B2744421C00C20A62 /* inputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6944BE7A2744421C00C20A62 /* inputValidator.swift */; };
 		6944BE7C2744421C00C20A62 /* inputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6944BE7A2744421C00C20A62 /* inputValidator.swift */; };
 		6944BE7D2744421C00C20A62 /* inputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6944BE7A2744421C00C20A62 /* inputValidator.swift */; };
+		695B857F2746A48B002F372F /* ProfileSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695B857E2746A48B002F372F /* ProfileSwiftUIView.swift */; };
+		695B85802746A48B002F372F /* ProfileSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695B857E2746A48B002F372F /* ProfileSwiftUIView.swift */; };
+		695B85812746A48B002F372F /* ProfileSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695B857E2746A48B002F372F /* ProfileSwiftUIView.swift */; };
+		695B85832746A4CF002F372F /* SettingsSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695B85822746A4CF002F372F /* SettingsSwiftUIView.swift */; };
+		695B85842746A4CF002F372F /* SettingsSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695B85822746A4CF002F372F /* SettingsSwiftUIView.swift */; };
+		695B85852746A4CF002F372F /* SettingsSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695B85822746A4CF002F372F /* SettingsSwiftUIView.swift */; };
+		695B85872746A4E6002F372F /* BookingSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695B85862746A4E6002F372F /* BookingSwiftUIView.swift */; };
+		695B85882746A4E6002F372F /* BookingSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695B85862746A4E6002F372F /* BookingSwiftUIView.swift */; };
+		695B85892746A4E6002F372F /* BookingSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695B85862746A4E6002F372F /* BookingSwiftUIView.swift */; };
+		695B858B2747669A002F372F /* QRCodeSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695B858A2747669A002F372F /* QRCodeSwiftUIView.swift */; };
+		695B858C2747669A002F372F /* QRCodeSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695B858A2747669A002F372F /* QRCodeSwiftUIView.swift */; };
+		695B858D2747669A002F372F /* QRCodeSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695B858A2747669A002F372F /* QRCodeSwiftUIView.swift */; };
+		695B859427476B44002F372F /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 695B859327476B44002F372F /* CodeScanner */; };
 		C6DA03571A8D771914C1B7B0 /* Pods_NIBM_ParkingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51B43CF377E13ED0DBDB9B57 /* Pods_NIBM_ParkingTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +112,10 @@
 		6944BE702743F87600C20A62 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		6944BE762744298400C20A62 /* sessionControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sessionControl.swift; sourceTree = "<group>"; };
 		6944BE7A2744421C00C20A62 /* inputValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inputValidator.swift; sourceTree = "<group>"; };
+		695B857E2746A48B002F372F /* ProfileSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSwiftUIView.swift; sourceTree = "<group>"; };
+		695B85822746A4CF002F372F /* SettingsSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSwiftUIView.swift; sourceTree = "<group>"; };
+		695B85862746A4E6002F372F /* BookingSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingSwiftUIView.swift; sourceTree = "<group>"; };
+		695B858A2747669A002F372F /* QRCodeSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeSwiftUIView.swift; sourceTree = "<group>"; };
 		8D763FBCB2E9BB2A2CDAF9D6 /* Pods-NIBM ParkingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBM ParkingTests.release.xcconfig"; path = "Target Support Files/Pods-NIBM ParkingTests/Pods-NIBM ParkingTests.release.xcconfig"; sourceTree = "<group>"; };
 		9AEBCCB605C2BDE7C6DC0743 /* Pods-NIBM Parking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBM Parking.debug.xcconfig"; path = "Target Support Files/Pods-NIBM Parking/Pods-NIBM Parking.debug.xcconfig"; sourceTree = "<group>"; };
 		A469FBA86ED89EAF68A8D092 /* Pods-NIBM Parking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBM Parking.release.xcconfig"; path = "Target Support Files/Pods-NIBM Parking/Pods-NIBM Parking.release.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				695B859427476B44002F372F /* CodeScanner in Frameworks */,
 				4DB79D2D6E7CDA34F6454D66 /* Pods_NIBM_Parking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,6 +213,10 @@
 			children = (
 				69402162273CFCAD004615B6 /* Main.storyboard */,
 				693D49DA27456261005C2448 /* HomeSwiftUIView.swift */,
+				695B857E2746A48B002F372F /* ProfileSwiftUIView.swift */,
+				695B85822746A4CF002F372F /* SettingsSwiftUIView.swift */,
+				695B85862746A4E6002F372F /* BookingSwiftUIView.swift */,
+				695B858A2747669A002F372F /* QRCodeSwiftUIView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -270,6 +292,9 @@
 			dependencies = (
 			);
 			name = "NIBM Parking";
+			packageProductDependencies = (
+				695B859327476B44002F372F /* CodeScanner */,
+			);
 			productName = "NIBM Parking";
 			productReference = 69402159273CFCAD004615B6 /* NIBM Parking.app */;
 			productType = "com.apple.product-type.application";
@@ -344,6 +369,9 @@
 				Base,
 			);
 			mainGroup = 69402150273CFCAD004615B6;
+			packageReferences = (
+				695B859227476B44002F372F /* XCRemoteSwiftPackageReference "CodeScanner" */,
+			);
 			productRefGroup = 6940215A273CFCAD004615B6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -496,13 +524,17 @@
 				692797D5273E730700A80E1F /* SigninViewController.swift in Sources */,
 				6940215D273CFCAD004615B6 /* AppDelegate.swift in Sources */,
 				6944BE772744298400C20A62 /* sessionControl.swift in Sources */,
+				695B85832746A4CF002F372F /* SettingsSwiftUIView.swift in Sources */,
 				692797DD273E76D100A80E1F /* EntityModel.swift in Sources */,
 				693D49DF27456702005C2448 /* forgetPasswordViewController.swift in Sources */,
+				695B858B2747669A002F372F /* QRCodeSwiftUIView.swift in Sources */,
+				695B85872746A4E6002F372F /* BookingSwiftUIView.swift in Sources */,
 				693D49DB27456261005C2448 /* HomeSwiftUIView.swift in Sources */,
 				693D49F127458192005C2448 /* ProfileViewController.swift in Sources */,
 				6940215F273CFCAD004615B6 /* SceneDelegate.swift in Sources */,
 				693D49ED27457F6A005C2448 /* HomeViewController.swift in Sources */,
 				6944BE7B2744421C00C20A62 /* inputValidator.swift in Sources */,
+				695B857F2746A48B002F372F /* ProfileSwiftUIView.swift in Sources */,
 				6944BE712743F87600C20A62 /* SignUpViewController.swift in Sources */,
 				693D49D72745545E005C2448 /* SplashViewController.swift in Sources */,
 			);
@@ -516,8 +548,12 @@
 				693D49E027456702005C2448 /* forgetPasswordViewController.swift in Sources */,
 				6944BE782744298400C20A62 /* sessionControl.swift in Sources */,
 				692797D6273E730700A80E1F /* SigninViewController.swift in Sources */,
+				695B85882746A4E6002F372F /* BookingSwiftUIView.swift in Sources */,
+				695B85842746A4CF002F372F /* SettingsSwiftUIView.swift in Sources */,
 				6944BE7C2744421C00C20A62 /* inputValidator.swift in Sources */,
 				693D49EE27457F6A005C2448 /* HomeViewController.swift in Sources */,
+				695B85802746A48B002F372F /* ProfileSwiftUIView.swift in Sources */,
+				695B858C2747669A002F372F /* QRCodeSwiftUIView.swift in Sources */,
 				693D49F227458192005C2448 /* ProfileViewController.swift in Sources */,
 				6944BE722743F87600C20A62 /* SignUpViewController.swift in Sources */,
 				693D49D82745545E005C2448 /* SplashViewController.swift in Sources */,
@@ -534,8 +570,12 @@
 				693D49E127456702005C2448 /* forgetPasswordViewController.swift in Sources */,
 				6944BE792744298400C20A62 /* sessionControl.swift in Sources */,
 				692797D7273E730700A80E1F /* SigninViewController.swift in Sources */,
+				695B85892746A4E6002F372F /* BookingSwiftUIView.swift in Sources */,
+				695B85852746A4CF002F372F /* SettingsSwiftUIView.swift in Sources */,
 				6944BE7D2744421C00C20A62 /* inputValidator.swift in Sources */,
 				693D49EF27457F6A005C2448 /* HomeViewController.swift in Sources */,
+				695B85812746A48B002F372F /* ProfileSwiftUIView.swift in Sources */,
+				695B858D2747669A002F372F /* QRCodeSwiftUIView.swift in Sources */,
 				693D49F327458192005C2448 /* ProfileViewController.swift in Sources */,
 				6944BE732743F87600C20A62 /* SignUpViewController.swift in Sources */,
 				693D49D92745545E005C2448 /* SplashViewController.swift in Sources */,
@@ -863,6 +903,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		695B859227476B44002F372F /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		695B859327476B44002F372F /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 695B859227476B44002F372F /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 69402151273CFCAD004615B6 /* Project object */;
 }
