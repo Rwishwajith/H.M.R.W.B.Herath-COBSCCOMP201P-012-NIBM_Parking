@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FirebaseAuth
+import Firebase
 
 struct SignUpSwiftUIView: View {
     var body: some View {
@@ -17,12 +18,13 @@ struct SignUpSwiftUIView: View {
 struct SignUpSwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
         SignUpSwiftUIView()
+
     }
 }
 
-
 struct SignUp: View{
     
+    @State var status = UserDefaults.standard.value(forKey: "IS_LOGGED") as? Bool ?? false
     @State var username = ""
     @State var email = ""
     @State var pass = ""
@@ -42,20 +44,20 @@ struct SignUp: View{
     let borderColor = Color(red: 107.0/255.0, green: 164.0/255.0, blue: 252.0/255.0)
     
     var body: some View{
-    
+   
         
         VStack(alignment: .leading){
             
             GeometryReader{_ in
                 
                 VStack{
-                    Image("vector-logo-car-bicycle-parking-area-zone-156033342").resizable().frame(width: 200.0, height: 200.0, alignment: .center)
+                    Image("vector-logo-car-bicycle-parking-area-zone-156033342").resizable().frame(width: 120.0, height: 120.0, alignment: .center)
                     
                     Text("Create a new account")
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(self.color)
-                        .padding(.top, 10)
+                        .padding(.top, 0)
                     
                     TextField("Username",text:self.$username)
                         .autocapitalization(.none)
@@ -92,8 +94,8 @@ struct SignUp: View{
                     .padding()
                     .background(RoundedRectangle(cornerRadius: 6)
                     .stroke(self.borderColor,lineWidth: 2))
-                    .padding(.top, 10)
-                    
+                    .padding(.top, 0)
+            
                     
                     // Confirm password
                     HStack(spacing: 15){
@@ -119,7 +121,7 @@ struct SignUp: View{
                     .padding()
                     .background(RoundedRectangle(cornerRadius: 6)
                     .stroke(self.borderColor,lineWidth: 2))
-                    .padding(.top, 10)
+                    .padding(.top, 0)
                     
                     TextField("Mobile Number",text:self.$mobilenumber)
                         .autocapitalization(.none)
@@ -133,7 +135,7 @@ struct SignUp: View{
                         .background(RoundedRectangle(cornerRadius:6).stroke(self.borderColor,lineWidth:2))
                         .padding(.top, 0)
                     
-                    TextField("Vehical Number",text:self.$mobilenumber)
+                    TextField("Vehical Number",text:self.$vehicalid)
                         .autocapitalization(.none)
                         .padding()
                         .background(RoundedRectangle(cornerRadius:6).stroke(self.borderColor,lineWidth:2))
@@ -179,8 +181,8 @@ struct SignUp: View{
                     
                     print("success")
                     
-                    UserDefaults.standard.set(true, forKey: "status")
-                    NotificationCenter.default.post(name: NSNotification.Name("status"), object: nil)
+                    UserDefaults.standard.set(true, forKey: "IS_LOGGED")
+                    NotificationCenter.default.post(name: NSNotification.Name("IS_LOGGED"), object: nil)
                 }
             }
             else{
