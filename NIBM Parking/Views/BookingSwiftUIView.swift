@@ -9,7 +9,27 @@ import SwiftUI
 
 struct BookingSwiftUIView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView(.vertical, showsIndicators: false, content:
+                    {
+                        HStack{
+                            
+                            Button(action: {}, label:
+                                    {
+                                        Image(systemName: "chevron.left").font(.title2)
+                                            . foregroundColor(.black)
+                                    })
+                            Spacer()
+                        }
+                        .overlay(
+                            
+                        Text("Select a Parking Spot")
+                            .font(.title2)
+                            .foregroundColor(.blue)
+                        .fontWeight(.semibold)
+                        )
+                        .padding()
+                    })
+            .background(Color(.white).ignoresSafeArea())
     }
 }
 
