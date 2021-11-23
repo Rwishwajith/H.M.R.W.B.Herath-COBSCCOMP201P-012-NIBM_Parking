@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class SplashViewController: UIViewController {
     
@@ -14,20 +15,23 @@ class SplashViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+       // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
         if sessionCntrl.userLogingStateGet()
         {
-            self.performSegue(withIdentifier: "splashToHome", sender: nil)
+                let vc = UIHostingController(rootView: TabViewSwiftUIView())
+                present(vc, animated: true)
         }
         else
         {
             self.performSegue(withIdentifier: "splashtoLogIn", sender: nil)
+            //let vc = UIHostingController(rootView: LoginSwiftUIView())
+            //present(vc, animated: true)
         }
     }
+ 
    
 
 }
