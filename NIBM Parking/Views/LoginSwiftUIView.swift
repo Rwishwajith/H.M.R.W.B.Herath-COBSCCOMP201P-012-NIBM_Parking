@@ -27,7 +27,7 @@ struct Home: View {
     var body: some View{
         VStack{
             if self.status{
-                HomeSwiftUIView()
+                TabViewSwiftUIView()
                 
             } else {
                 VStack{
@@ -129,13 +129,8 @@ struct Login: View{
             }
             
             HStack(spacing: 5){
-                
-                NavigationLink(destination: SignUpSwiftUIView()){
-                    Text("Don't have an account?")
-                    .fontWeight(.bold)
-                        .foregroundColor(Color(.black))
-                }
-                
+               
+                NavigationLink("Don't have an account?", destination: SignUpSwiftUIView())
                 Text("Register now").multilineTextAlignment(.leading)
                 
             }.padding(.top, 25)
@@ -162,7 +157,7 @@ struct Login: View{
             }
         }else{
             self.title = "Login Error"
-            self.error = "Please fill all the content property"
+            self.error = "Please fill all the details"
             self.alert = true
         }
     }
@@ -177,7 +172,7 @@ struct Login: View{
                     return
                 }
                 self.title = "Password Reset Sucessfully!"
-                self.error = "A new password is sent to your email!"
+                self.error = "The Password rest link is sent to your email!"
                 self.alert.toggle()
             }
         }
