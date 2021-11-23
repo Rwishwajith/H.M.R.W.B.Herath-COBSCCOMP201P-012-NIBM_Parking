@@ -9,6 +9,8 @@ target 'NIBM Parking' do
   pod 'Firebase/Auth'
   pod 'Loaf'
   pod 'Firebase/Database'
+  pod 'Firebase/Storage'
+  pod 'Firebase/Firestore'
 
   target 'NIBM ParkingTests' do
     inherit! :search_paths
