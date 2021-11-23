@@ -18,25 +18,37 @@ struct SettingsSwiftUIView: View {
     @State  var showDetails = false
     @State private var willMoveToNextScreen = false
     @State private var action: Int? = 0
+    @ScaledMetric var size: CGFloat = 1
     @State var status = UserDefaults.standard.value(forKey: "IS_LOGGED") as? Bool ?? false
     let sessionContrl = sessionControl()
     @ObservedObject var model = UserViewModel()
-    //let user = PakingUser(Username: String, UserEmail: <#T##String#>, Usermobilenumber: <#T##String#>, UserPassword: <#T##String#>, NIBMRegNumber: <#T##String#>, VehicalNumber: <#T##String#>)
-    //@EnvironmentObject var user: User
     var body: some View {
         NavigationView
         {
             Form {
                 Section(header: Text("Personal Information"))
                     {
-                    Label("Username          :", systemImage: "person.circle.fill")
-                    Label("Email                   :", systemImage: "envelope.fill")
-                    Label("Mobile Number :", systemImage: "phone.fill")
-                    Label("NIBM Email        :", systemImage: "envelope.circle.fill")
-                    Label("Vehical Number :", systemImage: "car.fill")
-                    
-                }.onAppear(perform: fetch)
-               
+                    List(model.list){
+                        item in
+                        VStack(alignment: .leading,spacing: 10){
+                            Label(item.username, systemImage: "person.circle.fill")
+                            Divider()
+                            Label(item.email, systemImage: "envelope.fill")
+                            Divider()
+                            Label(item.mobilenumber, systemImage: "phone.fill")
+                            Divider()
+                            Label(item.nibmID, systemImage: "envelope.circle.fill")
+                            Divider()
+                            Label(item.VehicleNumber, systemImage: "car.fill")
+                            Divider()
+            
+                        }
+                            
+                }.onAppear()
+                {
+                    self.model.getdatafromFireStore()
+                }
+                }
                 Section(header: Text("Other"))
                     {
                         NavigationLink(destination:LoginSwiftUIView()) {
@@ -56,9 +68,8 @@ struct SettingsSwiftUIView: View {
                     }
             .navigationBarTitle("Settings", displayMode: .inline)
             .navigationBarBackButtonHidden(true)
+            .listStyle(GroupedListStyle())
         }
-        
-      
        
         }
     init()

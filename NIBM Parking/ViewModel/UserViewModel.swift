@@ -16,6 +16,7 @@ class UserViewModel : ObservableObject
     {
         //Get ref to the db
         let db = Firestore.firestore()
+       // let sessionContrl = sessionControl()
     
         //read the documents
         db.collection("Users").getDocuments { snapshot, error in
@@ -26,15 +27,16 @@ class UserViewModel : ObservableObject
                 {
                     DispatchQueue.main.async {
                         self.list = snapshot.documents.map { doc in
-                            
+                            //let user = sessionContrl.userDataRetrive()
                             //create a userdetail item for each doc returns
                           return UserdetailsFirestore(id: doc.documentID,
                                                             username:doc["username"] as? String ?? "" ,
-                                                            pass: doc["pass"] as? String ?? "",
+                                                            email: doc["email"] as? String ?? "",
+                                                        pass: doc["pass"] as? String ?? "",
                                                             repass: doc["repass"] as? String ?? "",
                                                             mobilenumber: doc["mobilenumber"] as? String ?? "",
                                                             nibmID: doc["nibmID"] as? String ?? "",
-                                                            VehicalNumber: doc["VehicalNumber"] as? String ?? "")
+                                                            VehicleNumber: doc["VehicleNumber"] as? String ?? "")
                             }
                         }
                     }
@@ -42,7 +44,8 @@ class UserViewModel : ObservableObject
                     
                 }
         else {
-                //Handle Screen
+                print("No Documents")
+            return
             }
         }
     }

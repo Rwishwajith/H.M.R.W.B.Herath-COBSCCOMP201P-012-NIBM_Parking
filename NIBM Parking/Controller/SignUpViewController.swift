@@ -21,6 +21,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var txtvehicalNumber: UITextField!
     
     var ref: DatabaseReference!
+    let db = Firestore.firestore()
     
     override func viewDidLoad() {
         super.viewDidLoad()

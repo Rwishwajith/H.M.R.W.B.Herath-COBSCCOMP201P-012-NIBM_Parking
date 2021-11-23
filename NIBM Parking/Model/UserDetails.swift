@@ -11,9 +11,10 @@ struct UserdetailsFirestore : Identifiable
 {
     var id: String
     var username: String
+    var email : String
     var pass: String
     var repass : String
     var mobilenumber : String
     var nibmID : String
-    var VehicalNumber : String
+    var VehicleNumber : String
 }
