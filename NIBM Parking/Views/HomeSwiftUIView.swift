@@ -9,14 +9,11 @@ import SwiftUI
 
 struct HomeSwiftUIView: View {
     var body: some View {
-        NavigationLink(destination: BookingSwiftUIView()){
-            Text("Don't have an account?")
-            .fontWeight(.bold)
-                .foregroundColor(Color(.black))
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
         }
         
     }
-}
+
 
 struct HomeSwiftUIView_Previews: PreviewProvider {
     static var previews: some View {

@@ -20,7 +20,8 @@ struct SettingsSwiftUIView: View {
     @State private var action: Int? = 0
     @State var status = UserDefaults.standard.value(forKey: "IS_LOGGED") as? Bool ?? false
     let sessionContrl = sessionControl()
-
+    //let user = PakingUser(Username: String, UserEmail: <#T##String#>, Usermobilenumber: <#T##String#>, UserPassword: <#T##String#>, NIBMRegNumber: <#T##String#>, VehicalNumber: <#T##String#>)
+    //@EnvironmentObject var user: User
     var body: some View {
         NavigationView
         {
@@ -32,7 +33,9 @@ struct SettingsSwiftUIView: View {
                     Label("Mobile Number :", systemImage: "phone.fill")
                     Label("NIBM Email        :", systemImage: "envelope.circle.fill")
                     Label("Vehical Number :", systemImage: "car.fill")
-                }
+                    
+                }.onAppear(perform: fetch)
+               
             
                 NavigationLink(destination:LoginSwiftUIView()) {
                         Text("Sign Out")
@@ -55,12 +58,15 @@ struct SettingsSwiftUIView: View {
                 
                 
                     }
-            .navigationBarTitle("Profile", displayMode: .inline)
+            .navigationBarTitle("Settings", displayMode: .inline)
+            .navigationBarBackButtonHidden(true)
         }
        
         }
 }
- 
+private func fetch() {
+    let user = sessionControl.userDataRetrive
+    }
 struct SettingsSwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsSwiftUIView()
