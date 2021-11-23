@@ -30,7 +30,7 @@ class HomeViewController: UIViewController {
     //Connecting Swift UI
     @objc func didTapButton()
     {
-        let vc = UIHostingController(rootView: HomeSwiftUIView())
+        let vc = UIHostingController(rootView: LoginSwiftUIView())
         present(vc, animated: true)
         
     }
