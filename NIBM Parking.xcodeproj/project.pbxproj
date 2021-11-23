@@ -49,6 +49,7 @@
 		6944BE7B2744421C00C20A62 /* inputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6944BE7A2744421C00C20A62 /* inputValidator.swift */; };
 		6944BE7C2744421C00C20A62 /* inputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6944BE7A2744421C00C20A62 /* inputValidator.swift */; };
 		6944BE7D2744421C00C20A62 /* inputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6944BE7A2744421C00C20A62 /* inputValidator.swift */; };
+		69563FB1274D113800F29CA1 /* TabViewSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69563FB0274D113700F29CA1 /* TabViewSwiftUIView.swift */; };
 		695B857F2746A48B002F372F /* ProfileSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695B857E2746A48B002F372F /* ProfileSwiftUIView.swift */; };
 		695B85802746A48B002F372F /* ProfileSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695B857E2746A48B002F372F /* ProfileSwiftUIView.swift */; };
 		695B85812746A48B002F372F /* ProfileSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695B857E2746A48B002F372F /* ProfileSwiftUIView.swift */; };
@@ -121,6 +122,7 @@
 		6944BE702743F87600C20A62 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		6944BE762744298400C20A62 /* sessionControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sessionControl.swift; sourceTree = "<group>"; };
 		6944BE7A2744421C00C20A62 /* inputValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inputValidator.swift; sourceTree = "<group>"; };
+		69563FB0274D113700F29CA1 /* TabViewSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewSwiftUIView.swift; sourceTree = "<group>"; };
 		695B857E2746A48B002F372F /* ProfileSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSwiftUIView.swift; sourceTree = "<group>"; };
 		695B85822746A4CF002F372F /* SettingsSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSwiftUIView.swift; sourceTree = "<group>"; };
 		695B85862746A4E6002F372F /* BookingSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingSwiftUIView.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				695B858A2747669A002F372F /* QRCodeSwiftUIView.swift */,
 				695B859927481204002F372F /* LoginSwiftUIView.swift */,
 				695B859D274829F6002F372F /* SignUpSwiftUIView.swift */,
+				69563FB0274D113700F29CA1 /* TabViewSwiftUIView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -543,6 +546,7 @@
 				695B85832746A4CF002F372F /* SettingsSwiftUIView.swift in Sources */,
 				692797DD273E76D100A80E1F /* EntityModel.swift in Sources */,
 				693D49DF27456702005C2448 /* forgetPasswordViewController.swift in Sources */,
+				69563FB1274D113800F29CA1 /* TabViewSwiftUIView.swift in Sources */,
 				695B858B2747669A002F372F /* QRCodeSwiftUIView.swift in Sources */,
 				695B85872746A4E6002F372F /* BookingSwiftUIView.swift in Sources */,
 				693D49DB27456261005C2448 /* HomeSwiftUIView.swift in Sources */,
