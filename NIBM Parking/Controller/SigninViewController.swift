@@ -40,7 +40,8 @@ class SigninViewController: UIViewController
         }
         
         userAuthentication(password: txtPassword.text!, email: txtEmail.text!)
-        
+        let vc = UIHostingController(rootView: TabViewSwiftUIView())
+        present(vc, animated: true)
     
     }
     
