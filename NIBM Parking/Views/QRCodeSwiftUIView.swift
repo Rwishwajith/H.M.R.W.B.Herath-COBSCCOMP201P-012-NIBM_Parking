@@ -11,7 +11,7 @@ import Loaf
 
 struct QRCodeSwiftUIView: View {
   @State var isPresentingScanner = false
-  @State var scannedCode: String = "Scan a QR Code to get Started"
+  @State var scannedCode: String = "Scan QR Code to reserve the parking spot"
     
     var scannerSheet : some View{
         CodeScannerView(
