@@ -36,27 +36,22 @@ struct SettingsSwiftUIView: View {
                     
                 }.onAppear(perform: fetch)
                
-            
-                NavigationLink(destination:LoginSwiftUIView()) {
-                        Text("Sign Out")
-                            .foregroundColor(.white)
-                            .fontWeight(.bold)
-                            .padding(.vertical)
-                            .frame(width: UIScreen.main.bounds.width - 100)
-                    }.simultaneousGesture(TapGesture().onEnded{
-                        try! Auth.auth().signOut()
-                        sessionContrl.userLoginClear()
-                        UserDefaults.standard.set(false, forKey: "IS_LOGGED")
-                        NotificationCenter.default.post(name: NSNotification.Name("IS_LOGGED"), object: nil)
-                        
-                                })
-                
-                        .background(Color(.systemBlue))
-                        .cornerRadius(4)
-                        .padding(.top, 10)
-                
-                
-                
+                Section(header: Text("Other"))
+                    {
+                        NavigationLink(destination:LoginSwiftUIView()) {
+                                Text("Sign Out")
+                                    .foregroundColor(.blue)
+                                    .fontWeight(.bold)
+                                    .padding(.vertical)
+                                    .frame(width: UIScreen.main.bounds.width - 100)
+                            }.simultaneousGesture(TapGesture().onEnded{
+                                try! Auth.auth().signOut()
+                                sessionContrl.userLoginClear()
+                                UserDefaults.standard.set(false, forKey: "IS_LOGGED")
+                                NotificationCenter.default.post(name: NSNotification.Name("IS_LOGGED"), object: nil)
+                                
+                                        })
+                }
                     }
             .navigationBarTitle("Settings", displayMode: .inline)
             .navigationBarBackButtonHidden(true)
@@ -70,5 +65,6 @@ private func fetch() {
 struct SettingsSwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsSwiftUIView()
+            
     }
 }
