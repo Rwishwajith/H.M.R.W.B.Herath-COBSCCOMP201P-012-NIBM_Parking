@@ -193,7 +193,7 @@ struct SignUp: View{
         }
         else{
             
-            self.error = "Please fill all the contents properly"
+            self.error = "Please fill all required fields"
             self.alert.toggle()
         }
         
