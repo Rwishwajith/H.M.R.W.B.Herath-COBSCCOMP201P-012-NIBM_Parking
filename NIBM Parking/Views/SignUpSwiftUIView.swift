@@ -9,6 +9,7 @@ import SwiftUI
 import FirebaseAuth
 import Firebase
 
+
 struct SignUpSwiftUIView: View {
     var body: some View {
         SignUp()
@@ -171,7 +172,7 @@ struct SignUp: View{
             if self.pass == self.repass{
                 
                 Auth.auth().createUser(withEmail: self.email, password: self.pass) { (res, err) in
-                    
+                    AddinfotoFireStore(username: self.username, email: self.email, pass: self.pass, repass: self.repass, mobilenumber: self.mobilenumber, nibmID: self.nibmID, VehicleNumber: self.vehicalid)
                     if err != nil{
                         
                         self.error = err!.localizedDescription
@@ -180,7 +181,6 @@ struct SignUp: View{
                     }
                     
                     print("success")
-                    
                     UserDefaults.standard.set(true, forKey: "IS_LOGGED")
                     NotificationCenter.default.post(name: NSNotification.Name("IS_LOGGED"), object: nil)
                 }
@@ -197,5 +197,11 @@ struct SignUp: View{
             self.alert.toggle()
         }
         
+    }
+    
+    func AddinfotoFireStore(username : String, email: String, pass: String,  repass: String, mobilenumber: String, nibmID: String, VehicleNumber: String)
+    {
+        let db = Firestore.firestore()
+        db.collection("Users").document().setData(["username": username, "email": email, "pass": pass, "repass": repass, "mobilenumber": mobilenumber,"nibmID": nibmID, "VehicleNumber": VehicleNumber])
     }
 }
