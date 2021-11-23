@@ -20,6 +20,9 @@ class HomeViewController: UIViewController {
         button.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
         // Do any additional setup after loading the view.
     }
+
+  
+  
     
     @IBAction func OnProfilePressed(_ sender: UIButton) {
     self.performSegue(withIdentifier: "HometoProfile", sender: nil)
@@ -27,9 +30,21 @@ class HomeViewController: UIViewController {
     //Connecting Swift UI
     @objc func didTapButton()
     {
-        let vc = UIHostingController(rootView: SettingsSwiftUIView())
+        let vc = UIHostingController(rootView: HomeSwiftUIView())
         present(vc, animated: true)
         
     }
+    
+  /*  @IBAction func OnHomePressed(_ sender: UIButton) {
+    self.performSegue(withIdentifier: "Home", sender: nil)
+    }
+    //Connecting Swift UI
+    @objc func TapButton()
+    {
+        let vc = UIHostingController(rootView: HomeSwiftUIView())
+        present(vc, animated: true)
+        
+    }*/
+    
    
 }

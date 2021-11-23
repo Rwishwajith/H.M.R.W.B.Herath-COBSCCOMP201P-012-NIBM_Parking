@@ -9,11 +9,10 @@ import SwiftUI
 
 struct HomeSwiftUIView: View {
     var body: some View {
-        NavigationView{
-            ZStack
-            {
-                Color(.white)
-            }
+        NavigationLink(destination: BookingSwiftUIView()){
+            Text("Don't have an account?")
+            .fontWeight(.bold)
+                .foregroundColor(Color(.black))
         }
         
     }
@@ -24,3 +23,4 @@ struct HomeSwiftUIView_Previews: PreviewProvider {
         HomeSwiftUIView()
     }
 }
+

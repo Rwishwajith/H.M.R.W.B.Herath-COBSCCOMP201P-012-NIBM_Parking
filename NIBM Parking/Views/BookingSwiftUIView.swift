@@ -102,12 +102,12 @@ struct BookingSwiftUIView: View {
                         HStack(spacing: 15)
                             {
                             RoundedRectangle(cornerRadius: 4)
-                                .stroke(Color.gray)
+                                .stroke(Color.blue)
                                 .frame(width: 20, height: 20)
                                 .overlay(
                                     Image(systemName:"xmark")
                                         .font(.caption)
-                                        .foregroundColor(.green)
+                                        .foregroundColor(.red)
                                 )
                             Text("Reserved")
                                 .font(.caption)
