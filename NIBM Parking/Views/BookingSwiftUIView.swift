@@ -9,6 +9,7 @@ import SwiftUI
 struct BookingSwiftUIView: View {
     @State var selectedSlot : [Int] = []
     @State var reservedSlots : [Int] = [3,10]
+    @State var vipSlots : [Int] = [16,17,18,29]
     var body: some View {
         ScrollView(.vertical, showsIndicators: false, content:
                     {
@@ -46,7 +47,7 @@ struct BookingSwiftUIView: View {
                                     {index in
                                     //Get Correct Parking Slot
                                     let slot = index >= 12 ? index - 1 : index
-                                    SlotView(index: index, slot: slot, selectedSlot: $selectedSlot, reservedSlots: $reservedSlots)
+                                    SlotView(index: index, slot: slot, selectedSlot: $selectedSlot, reservedSlots: $reservedSlots, vipSlots: $vipSlots)
                                         .contentShape(Rectangle())
                                         .onTapGesture {
                                             if selectedSlot.contains(slot)
@@ -72,7 +73,7 @@ struct BookingSwiftUIView: View {
                                     {
                                     index in
                                     let slot = index >= 23 ? index - 2 : index - 1
-                                    SlotView(index: index, slot: slot, selectedSlot: $selectedSlot, reservedSlots: $reservedSlots)
+                                    SlotView(index: index, slot: slot, selectedSlot: $selectedSlot, reservedSlots: $reservedSlots, vipSlots: $vipSlots)
                                         .contentShape(Rectangle())
                                         .onTapGesture {
                                             
@@ -113,7 +114,18 @@ struct BookingSwiftUIView: View {
                                 .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                             
                             RoundedRectangle(cornerRadius: 4)
-                                .stroke(Color.gray)
+                                .stroke(Color.blue)
+                                .frame(width: 20, height: 20)
+                                .overlay(
+                                    Image(systemName:"star.fill")
+                                        .font(.caption)
+                                        .foregroundColor(.yellow))
+                            Text("VIP")
+                                .font(.caption)
+                                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                            
+                            RoundedRectangle(cornerRadius: 4)
+                                .stroke(Color.blue)
                                 .frame(width: 20, height: 20)
                             
                             Text("Available")
@@ -142,6 +154,7 @@ struct SlotView: View
     
     @Binding var selectedSlot: [Int]
     @Binding var reservedSlots: [Int]
+    @Binding var vipSlots: [Int]
     
     var body: some View
     {
@@ -158,6 +171,11 @@ struct SlotView: View
             {
                 Image(systemName: "xmark")
                     .foregroundColor(.gray)
+            }
+            if vipSlots.contains(slot)
+            {
+                Image(systemName: "star.fill")
+                    .foregroundColor(.yellow)
             }
         }
       
