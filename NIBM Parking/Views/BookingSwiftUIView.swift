@@ -11,7 +11,9 @@ struct BookingSwiftUIView: View {
     @State var reservedSlots : [Int] = [3,10]
     @State var vipSlots : [Int] = [16,17,18,29]
     var body: some View {
+        
         ScrollView(.vertical, showsIndicators: false, content:
+                    
                     {
                         HStack{
                             
@@ -102,12 +104,12 @@ struct BookingSwiftUIView: View {
                         HStack(spacing: 15)
                             {
                             RoundedRectangle(cornerRadius: 4)
-                                .stroke(Color.blue)
+                                .stroke(Color.gray)
                                 .frame(width: 20, height: 20)
                                 .overlay(
                                     Image(systemName:"xmark")
                                         .font(.caption)
-                                        .foregroundColor(.red)
+                                        .foregroundColor(.green)
                                 )
                             Text("Reserved")
                                 .font(.caption)
