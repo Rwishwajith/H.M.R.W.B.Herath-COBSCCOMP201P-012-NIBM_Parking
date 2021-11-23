@@ -20,6 +20,7 @@ struct SettingsSwiftUIView: View {
     @State private var action: Int? = 0
     @State var status = UserDefaults.standard.value(forKey: "IS_LOGGED") as? Bool ?? false
     let sessionContrl = sessionControl()
+    @ObservedObject var model = UserViewModel()
     //let user = PakingUser(Username: String, UserEmail: <#T##String#>, Usermobilenumber: <#T##String#>, UserPassword: <#T##String#>, NIBMRegNumber: <#T##String#>, VehicalNumber: <#T##String#>)
     //@EnvironmentObject var user: User
     var body: some View {
@@ -56,8 +57,14 @@ struct SettingsSwiftUIView: View {
             .navigationBarTitle("Settings", displayMode: .inline)
             .navigationBarBackButtonHidden(true)
         }
+        
+      
        
         }
+    init()
+    {
+        model.getdatafromFireStore()
+    }
 }
 private func fetch() {
     let user = sessionControl.userDataRetrive

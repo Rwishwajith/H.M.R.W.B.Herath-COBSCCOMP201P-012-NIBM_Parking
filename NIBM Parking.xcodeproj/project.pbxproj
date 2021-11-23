@@ -50,6 +50,7 @@
 		6944BE7C2744421C00C20A62 /* inputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6944BE7A2744421C00C20A62 /* inputValidator.swift */; };
 		6944BE7D2744421C00C20A62 /* inputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6944BE7A2744421C00C20A62 /* inputValidator.swift */; };
 		69563FB1274D113800F29CA1 /* TabViewSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69563FB0274D113700F29CA1 /* TabViewSwiftUIView.swift */; };
+		69563FB5274D4B4400F29CA1 /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69563FB4274D4B4400F29CA1 /* UserDetails.swift */; };
 		695B857F2746A48B002F372F /* ProfileSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695B857E2746A48B002F372F /* ProfileSwiftUIView.swift */; };
 		695B85802746A48B002F372F /* ProfileSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695B857E2746A48B002F372F /* ProfileSwiftUIView.swift */; };
 		695B85812746A48B002F372F /* ProfileSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695B857E2746A48B002F372F /* ProfileSwiftUIView.swift */; };
@@ -72,6 +73,7 @@
 		695B859E274829F6002F372F /* SignUpSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695B859D274829F6002F372F /* SignUpSwiftUIView.swift */; };
 		695B859F274829F6002F372F /* SignUpSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695B859D274829F6002F372F /* SignUpSwiftUIView.swift */; };
 		695B85A0274829F6002F372F /* SignUpSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695B859D274829F6002F372F /* SignUpSwiftUIView.swift */; };
+		69A16E67274D4D8F00291634 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A16E66274D4D8F00291634 /* UserViewModel.swift */; };
 		C6DA03571A8D771914C1B7B0 /* Pods_NIBM_ParkingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51B43CF377E13ED0DBDB9B57 /* Pods_NIBM_ParkingTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +125,7 @@
 		6944BE762744298400C20A62 /* sessionControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sessionControl.swift; sourceTree = "<group>"; };
 		6944BE7A2744421C00C20A62 /* inputValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inputValidator.swift; sourceTree = "<group>"; };
 		69563FB0274D113700F29CA1 /* TabViewSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewSwiftUIView.swift; sourceTree = "<group>"; };
+		69563FB4274D4B4400F29CA1 /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
 		695B857E2746A48B002F372F /* ProfileSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSwiftUIView.swift; sourceTree = "<group>"; };
 		695B85822746A4CF002F372F /* SettingsSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSwiftUIView.swift; sourceTree = "<group>"; };
 		695B85862746A4E6002F372F /* BookingSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingSwiftUIView.swift; sourceTree = "<group>"; };
@@ -130,6 +133,7 @@
 		695B859527479F6F002F372F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		695B859927481204002F372F /* LoginSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSwiftUIView.swift; sourceTree = "<group>"; };
 		695B859D274829F6002F372F /* SignUpSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSwiftUIView.swift; sourceTree = "<group>"; };
+		69A16E66274D4D8F00291634 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		8D763FBCB2E9BB2A2CDAF9D6 /* Pods-NIBM ParkingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBM ParkingTests.release.xcconfig"; path = "Target Support Files/Pods-NIBM ParkingTests/Pods-NIBM ParkingTests.release.xcconfig"; sourceTree = "<group>"; };
 		9AEBCCB605C2BDE7C6DC0743 /* Pods-NIBM Parking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBM Parking.debug.xcconfig"; path = "Target Support Files/Pods-NIBM Parking/Pods-NIBM Parking.debug.xcconfig"; sourceTree = "<group>"; };
 		A469FBA86ED89EAF68A8D092 /* Pods-NIBM Parking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBM Parking.release.xcconfig"; path = "Target Support Files/Pods-NIBM Parking/Pods-NIBM Parking.release.xcconfig"; sourceTree = "<group>"; };
@@ -190,6 +194,7 @@
 		6940215B273CFCAD004615B6 /* NIBM Parking */ = {
 			isa = PBXGroup;
 			children = (
+				69A16E65274D4D5A00291634 /* ViewModel */,
 				6944BE742744294700C20A62 /* Util */,
 				6940218E273D2951004615B6 /* Controller */,
 				6940218D273D293D004615B6 /* Model */,
@@ -242,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				692797DC273E76D100A80E1F /* EntityModel.swift */,
+				69563FB4274D4B4400F29CA1 /* UserDetails.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -267,6 +273,14 @@
 				6944BE7A2744421C00C20A62 /* inputValidator.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		69A16E65274D4D5A00291634 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				69A16E66274D4D8F00291634 /* UserViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		C61C1BEC01383964B10A6D04 /* Pods */ = {
@@ -540,6 +554,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				692797D5273E730700A80E1F /* SigninViewController.swift in Sources */,
+				69A16E67274D4D8F00291634 /* UserViewModel.swift in Sources */,
 				6940215D273CFCAD004615B6 /* AppDelegate.swift in Sources */,
 				695B859A27481204002F372F /* LoginSwiftUIView.swift in Sources */,
 				6944BE772744298400C20A62 /* sessionControl.swift in Sources */,
@@ -550,6 +565,7 @@
 				695B858B2747669A002F372F /* QRCodeSwiftUIView.swift in Sources */,
 				695B85872746A4E6002F372F /* BookingSwiftUIView.swift in Sources */,
 				693D49DB27456261005C2448 /* HomeSwiftUIView.swift in Sources */,
+				69563FB5274D4B4400F29CA1 /* UserDetails.swift in Sources */,
 				693D49F127458192005C2448 /* ProfileViewController.swift in Sources */,
 				6940215F273CFCAD004615B6 /* SceneDelegate.swift in Sources */,
 				693D49ED27457F6A005C2448 /* HomeViewController.swift in Sources */,
