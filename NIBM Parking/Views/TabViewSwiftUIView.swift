@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct TabViewSwiftUIView: View {
-    
+
     @State var selectedTab: Int = 0
+
     var body: some View {
         TabView(selection: $selectedTab)
         {
@@ -17,9 +18,10 @@ struct TabViewSwiftUIView: View {
                 .tabItem {
                     Image(systemName:"house.fill")
                     Text("Home")
-                    
                 }
                 .tag(0)
+           
+            
             BookingSwiftUIView()
                 .tabItem {
                     Image(systemName:"p.square.fill")
@@ -35,6 +37,7 @@ struct TabViewSwiftUIView: View {
                 }
                 .tag(2)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
     }
 

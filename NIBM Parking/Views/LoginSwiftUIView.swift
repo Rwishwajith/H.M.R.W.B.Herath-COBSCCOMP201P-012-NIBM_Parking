@@ -15,10 +15,13 @@ struct LoginSwiftUIView: View {
 }
 
 struct LoginSwiftUIView_Previews: PreviewProvider {
+  
     static var previews: some View {
+        
         LoginSwiftUIView()
     }
 }
+
 
 struct Home: View {
     

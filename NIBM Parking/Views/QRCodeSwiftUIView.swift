@@ -30,33 +30,46 @@ struct QRCodeSwiftUIView: View {
     var body: some View {
         VStack(spacing: 10)
             {
-            Text(Image(systemName: "car.fill")) + Text(" Selected Slot  :")
-                .font(.caption)
+            Text(Image(systemName: "car.fill")) + Text(" Selected Slot   :")
+                .font(.subheadline)
                 .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
             Text(Image(systemName: "number.circle")) + Text(" Vehical Number :")
-                .font(.caption)
+                .font(.subheadline)
                 .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-            Text(Image(systemName: "timer")) + Text(" Reserved At      :")
-                .font(.caption)
+            Text(Image(systemName: "timer")) + Text(" Reserved At       :")
+                .font(.subheadline)
                 .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
             Image("QR").resizable().frame(width: 200.0, height: 200.0, alignment: .top)
             Text(scannedCode)
             Button(action: {
                 self.isPresentingScanner = true
                 }) {
-                    Text("Scan Code")
-                        .foregroundColor(.white)
-                        .fontWeight(.bold)
-                        .padding(.vertical)
-                        .frame(width: 100, height: 70, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                Text("Scan Code")
+                    .foregroundColor(.white)
+                    .fontWeight(.bold)
+                    .padding(.vertical)
+                    .frame(width: 100, height: 50, alignment: .center)
                 }
-                .background(Color(.systemBlue))
-                .cornerRadius(6)
-                .padding(.top, 15)
+            .background(Color(.systemBlue))
+            .cornerRadius(6)
+            .padding(.top, 15)
             .sheet(isPresented: $isPresentingScanner){
                 self.scannerSheet
             }
+            Button(action: {
+                
+                }) {
+                Text("Confirm")
+                    .foregroundColor(.white)
+                    .fontWeight(.bold)
+                    .padding(.vertical)
+                    .frame(width: 200, height: 50, alignment: .center)
+                }
+            .background(Color(.systemGreen))
+            .cornerRadius(6)
+            .padding(.top, 60)
         }
+       
     }
 }
 

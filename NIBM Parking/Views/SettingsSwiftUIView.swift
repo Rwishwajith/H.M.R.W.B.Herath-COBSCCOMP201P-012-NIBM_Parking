@@ -67,7 +67,7 @@ struct SettingsSwiftUIView: View {
                 }
                     }
             .navigationBarTitle("Settings", displayMode: .inline)
-            .navigationBarBackButtonHidden(true)
+            .navigationBarBackButtonHidden(false)
             .listStyle(GroupedListStyle())
         }
        

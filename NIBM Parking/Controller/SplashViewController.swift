@@ -21,7 +21,7 @@ class SplashViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         if sessionCntrl.userLogingStateGet()
         {
-                let vc = UIHostingController(rootView: TabViewSwiftUIView())
+                let vc = UIHostingController(rootView: WelcomePageSwiftUIView())
                 present(vc, animated: true)
         }
         else

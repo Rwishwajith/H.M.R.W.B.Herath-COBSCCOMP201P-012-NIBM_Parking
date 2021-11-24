@@ -15,28 +15,9 @@ struct BookingSwiftUIView: View {
     @State var timeReseverd = ""
 
     var body: some View {
-        
+        NavigationView{
         ScrollView(.vertical, showsIndicators: false, content:
-                    
                     {
-                        HStack{
-                            
-                            Button(action: {}, label:
-                                    {
-                                        Image(systemName: "chevron.left").font(.title2)
-                                            . foregroundColor(.black)
-                                    })
-                            Spacer()
-                        }
-                        .overlay(
-                            
-                        Text("Select a Parking Spot")
-                            .font(.title2)
-                            .foregroundColor(.blue)
-                        .fontWeight(.semibold)
-                        )
-                        .padding()
-                        
                         //Parking Spot Slots
                         //Total Slots = 30
                         //VIP Slots = 5
@@ -167,28 +148,31 @@ struct BookingSwiftUIView: View {
                                 Text("RESERVE")
                                     .fontWeight(.light)
                                     .foregroundColor(Color(.white))
-                                    .frame(width: 100, height: 70, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                    .frame(width: 100, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                             }
                             .background(Color(.systemBlue))
                             .cornerRadius(6)
                             .padding(.top, 15)
                             
-                            NavigationLink(
-                                destination: QRCodeSwiftUIView(),
-                                label: {
+                            NavigationLink(destination:QRCodeSwiftUIView())
+                                {
                                     Text("SCAN QR")
                                         .fontWeight(.light)
                                         .foregroundColor(Color(.white))
-                                        .frame(width: 100, height: 70, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                                })
+                                        .frame(width: 100, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                }
                             .background(Color(.systemBlue))
                             .cornerRadius(6)
                             .padding(.top, 15)
                         }.padding(.top, 40)
                     })
             .background(Color(.white).ignoresSafeArea())
+            .navigationBarTitle("Booking", displayMode: .inline)
+            .navigationBarBackButtonHidden(true)
+            .listStyle(GroupedListStyle())
     }
-}
+    }
+    }
 
 struct SlotView: View
 {
