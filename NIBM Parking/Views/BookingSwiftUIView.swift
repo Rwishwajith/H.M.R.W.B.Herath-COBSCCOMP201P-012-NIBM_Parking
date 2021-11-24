@@ -6,10 +6,14 @@
 //
 
 import SwiftUI
+import Firebase
+
 struct BookingSwiftUIView: View {
     @State var selectedSlot : [Int] = []
     @State var reservedSlots : [Int] = [3,10]
     @State var vipSlots : [Int] = [16,17,18,29]
+    @State var timeReseverd = ""
+
     var body: some View {
         
         ScrollView(.vertical, showsIndicators: false, content:
@@ -144,6 +148,40 @@ struct BookingSwiftUIView: View {
                             
                         }
                         .padding(.top,20)
+                        VStack(alignment: .leading, spacing: 5, content: {
+                            Text(Image(systemName: "car.fill")) + Text(" Selected Slot  :")
+                                .font(.caption)
+                                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                            Text(Image(systemName: "timer")) + Text(" Registration Number :")
+                                .font(.caption)
+                                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                            Text(Image(systemName: "timer")) + Text(" Remaining Time :")
+                                .font(.caption)
+                                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                        })
+                        .padding(.top,100)
+                        VStack(alignment: .center, spacing: 5, content: {
+                        })
+                        HStack(spacing: 40){
+                            Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
+                                Text("RESERVE")
+                                    .fontWeight(.light)
+                                    .foregroundColor(Color(.white))
+                                    .frame(width: 100, height: 70, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                            }
+                            .background(Color(.systemBlue))
+                            .cornerRadius(6)
+                            .padding(.top, 15)
+                            Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
+                            Text("SCAN QR")
+                                .fontWeight(.light)
+                                .foregroundColor(Color(.white))
+                                .frame(width: 100, height: 70, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                        }
+                            .background(Color(.systemBlue))
+                            .cornerRadius(6)
+                            .padding(.top, 15)
+                        }.padding(.top, 40)
                     })
             .background(Color(.white).ignoresSafeArea())
     }
@@ -188,4 +226,9 @@ struct BookingSwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
         BookingSwiftUIView()
     }
+}
+func AddinfotoFireStore(username : String, email: String, pass: String,  repass: String, mobilenumber: String, nibmID: String, VehicleNumber: String)
+{
+    let db = Firestore.firestore()
+    db.collection("Users").document().setData(["username": username, "email": email, "pass": pass, "repass": repass, "mobilenumber": mobilenumber,"nibmID": nibmID, "VehicleNumber": VehicleNumber])
 }
