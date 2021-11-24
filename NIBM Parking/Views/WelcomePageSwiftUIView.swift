@@ -19,11 +19,22 @@ struct FullScreenModalView : View {
 struct WelcomePageSwiftUIView: View {
     @State private var isPresented = false
     var body: some View {
-        Button("Continue")
-            {self.isPresented.toggle()
+      
+        ZStack{
+            Color(#colorLiteral(red: 0.476841867, green: 0.5048075914, blue: 1, alpha: 1))
+                .ignoresSafeArea()
+            Button("CONTINUE TO The APP")
+                {self.isPresented.toggle()
+                
+            }
+            .fullScreenCover(isPresented: $isPresented, content : FullScreenModalView.init)
+            .padding()
+            .foregroundColor(.white)
+            .frame(width: 250, height: 60)
+            .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
             
         }
-        .fullScreenCover(isPresented: $isPresented, content : FullScreenModalView.init)
+        
     }
     }
 
