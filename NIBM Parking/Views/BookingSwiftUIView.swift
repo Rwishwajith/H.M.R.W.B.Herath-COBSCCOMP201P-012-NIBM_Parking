@@ -152,7 +152,7 @@ struct BookingSwiftUIView: View {
                             Text(Image(systemName: "car.fill")) + Text(" Selected Slot  :")
                                 .font(.caption)
                                 .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                            Text(Image(systemName: "timer")) + Text(" Registration Number :")
+                            Text(Image(systemName: "number.circle")) + Text(" Vehical Number :")
                                 .font(.caption)
                                 .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                             Text(Image(systemName: "timer")) + Text(" Remaining Time :")
@@ -163,7 +163,7 @@ struct BookingSwiftUIView: View {
                         VStack(alignment: .center, spacing: 5, content: {
                         })
                         HStack(spacing: 40){
-                            Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
+                          Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
                                 Text("RESERVE")
                                     .fontWeight(.light)
                                     .foregroundColor(Color(.white))
@@ -172,12 +172,15 @@ struct BookingSwiftUIView: View {
                             .background(Color(.systemBlue))
                             .cornerRadius(6)
                             .padding(.top, 15)
-                            Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
-                            Text("SCAN QR")
-                                .fontWeight(.light)
-                                .foregroundColor(Color(.white))
-                                .frame(width: 100, height: 70, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        }
+                            
+                            NavigationLink(
+                                destination: QRCodeSwiftUIView(),
+                                label: {
+                                    Text("SCAN QR")
+                                        .fontWeight(.light)
+                                        .foregroundColor(Color(.white))
+                                        .frame(width: 100, height: 70, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                })
                             .background(Color(.systemBlue))
                             .cornerRadius(6)
                             .padding(.top, 15)

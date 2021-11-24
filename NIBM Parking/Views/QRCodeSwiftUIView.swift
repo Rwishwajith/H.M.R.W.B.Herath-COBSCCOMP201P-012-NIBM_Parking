@@ -27,16 +27,32 @@ struct QRCodeSwiftUIView: View {
             }
        )
     }
-    
     var body: some View {
         VStack(spacing: 10)
             {
+            Text(Image(systemName: "car.fill")) + Text(" Selected Slot  :")
+                .font(.caption)
+                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+            Text(Image(systemName: "number.circle")) + Text(" Vehical Number :")
+                .font(.caption)
+                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+            Text(Image(systemName: "timer")) + Text(" Reserved At      :")
+                .font(.caption)
+                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+            Image("QR").resizable().frame(width: 200.0, height: 200.0, alignment: .top)
             Text(scannedCode)
-            
-            Button("Sacn QR Code")
-            {
+            Button(action: {
                 self.isPresentingScanner = true
-            }
+                }) {
+                    Text("Scan Code")
+                        .foregroundColor(.white)
+                        .fontWeight(.bold)
+                        .padding(.vertical)
+                        .frame(width: 100, height: 70, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                }
+                .background(Color(.systemBlue))
+                .cornerRadius(6)
+                .padding(.top, 15)
             .sheet(isPresented: $isPresentingScanner){
                 self.scannerSheet
             }
