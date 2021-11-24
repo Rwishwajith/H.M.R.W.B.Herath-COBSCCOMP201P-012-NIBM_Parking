@@ -23,7 +23,7 @@ struct WelcomePageSwiftUIView: View {
         ZStack{
             Color(#colorLiteral(red: 0.476841867, green: 0.5048075914, blue: 1, alpha: 1))
                 .ignoresSafeArea()
-            Button("CONTINUE TO The APP")
+            Button("CONTINUE TO THE APP")
                 {self.isPresented.toggle()
                 
             }
