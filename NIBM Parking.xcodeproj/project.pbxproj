@@ -74,6 +74,8 @@
 		696A883E274EBC9C00C6105D /* WelcomePageSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696A883D274EBC9C00C6105D /* WelcomePageSwiftUIView.swift */; };
 		69A16E67274D4D8F00291634 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A16E66274D4D8F00291634 /* UserViewModel.swift */; };
 		C6DA03571A8D771914C1B7B0 /* Pods_NIBM_ParkingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51B43CF377E13ED0DBDB9B57 /* Pods_NIBM_ParkingTests.framework */; };
+		D8E6C9A6274FA1A000975D01 /* BookingSlotsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E6C9A5274FA1A000975D01 /* BookingSlotsViewModel.swift */; };
+		D8E6C9A8274FA5FF00975D01 /* parkingSlots.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E6C9A7274FA5FF00975D01 /* parkingSlots.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +144,8 @@
 		9AEBCCB605C2BDE7C6DC0743 /* Pods-NIBM Parking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBM Parking.debug.xcconfig"; path = "Target Support Files/Pods-NIBM Parking/Pods-NIBM Parking.debug.xcconfig"; sourceTree = "<group>"; };
 		A469FBA86ED89EAF68A8D092 /* Pods-NIBM Parking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBM Parking.release.xcconfig"; path = "Target Support Files/Pods-NIBM Parking/Pods-NIBM Parking.release.xcconfig"; sourceTree = "<group>"; };
 		C79655CE9D3F48F5EDB3B07B /* Pods-NIBM ParkingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBM ParkingTests.debug.xcconfig"; path = "Target Support Files/Pods-NIBM ParkingTests/Pods-NIBM ParkingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D8E6C9A5274FA1A000975D01 /* BookingSlotsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingSlotsViewModel.swift; sourceTree = "<group>"; };
+		D8E6C9A7274FA5FF00975D01 /* parkingSlots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parkingSlots.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +260,7 @@
 				692797DC273E76D100A80E1F /* EntityModel.swift */,
 				69563FB4274D4B4400F29CA1 /* UserDetails.swift */,
 				69672F43274F458F001F6BFD /* UserModel.swift */,
+				D8E6C9A7274FA5FF00975D01 /* parkingSlots.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -280,6 +285,7 @@
 				6944BE762744298400C20A62 /* sessionControl.swift */,
 				6944BE7A2744421C00C20A62 /* inputValidator.swift */,
 				69672F41274F43F6001F6BFD /* AuthViewModel.swift */,
+				D8E6C9A5274FA1A000975D01 /* BookingSlotsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -563,6 +569,7 @@
 				695B85832746A4CF002F372F /* SettingsSwiftUIView.swift in Sources */,
 				692797DD273E76D100A80E1F /* EntityModel.swift in Sources */,
 				693D49DF27456702005C2448 /* forgetPasswordViewController.swift in Sources */,
+				D8E6C9A6274FA1A000975D01 /* BookingSlotsViewModel.swift in Sources */,
 				69672F46274F463D001F6BFD /* SignUpView.swift in Sources */,
 				69672F44274F458F001F6BFD /* UserModel.swift in Sources */,
 				69563FB1274D113800F29CA1 /* TabViewSwiftUIView.swift in Sources */,
@@ -572,6 +579,7 @@
 				69563FB5274D4B4400F29CA1 /* UserDetails.swift in Sources */,
 				693D49F127458192005C2448 /* ProfileViewController.swift in Sources */,
 				696A883E274EBC9C00C6105D /* WelcomePageSwiftUIView.swift in Sources */,
+				D8E6C9A8274FA5FF00975D01 /* parkingSlots.swift in Sources */,
 				6940215F273CFCAD004615B6 /* SceneDelegate.swift in Sources */,
 				69672F48274F4649001F6BFD /* SignInView.swift in Sources */,
 				693D49ED27457F6A005C2448 /* HomeViewController.swift in Sources */,

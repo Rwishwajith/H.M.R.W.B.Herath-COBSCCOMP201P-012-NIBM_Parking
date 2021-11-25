@@ -48,7 +48,7 @@ struct SignUpView: View {
                     .autocapitalization(.none)
                     .padding()
                     .background(Color(.secondarySystemBackground))
-                
+            
                 TextField("Vehicle Number",text:$vehicleNo)
                     .disableAutocorrection(true)
                     .autocapitalization(.none)
