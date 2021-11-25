@@ -9,8 +9,8 @@ import SwiftUI
 import Firebase
 
 struct HomeSwiftUIView: View {
-    @State var selectedSlot : [Int] = []
-    @State var reservedSlots : [Int] = [3,10]
+    @State var selectedSlot : [Int] = [5]
+    @State var reservedSlots : [Int] = [3]
     @State var vipSlots : [Int] = [16,17,18,29]
     @State var timeReseverd = ""
     @State var timeremaining = 100
@@ -85,7 +85,7 @@ struct HomeSwiftUIView: View {
                             })
                         }
                         .padding()
-                        .padding(.top,30)
+                        .padding(.top,50)
                         .background(Color.blue)
                         
                         
@@ -133,27 +133,44 @@ struct HomeSwiftUIView: View {
                             
                         }
                         .padding(.top,20)
-                        HStack(alignment: .top, spacing: 5, content: {
+                        //Legend of the indicatord
+                        VStack(spacing: 15)
+                            {
+                            RoundedRectangle(cornerRadius: 4)
+                                .stroke(Color.gray)
+                                .frame(width: 20, height: 20)
+                                .overlay(
+                                    Image(systemName:"car.fill")
+                                        .font(.caption)
+                                        .foregroundColor(.green)
+                                )
+                            Text("Plate Number : WP- 3526")
+                                .font(.caption)
+                                .foregroundColor(.black)
+                            
+                            RoundedRectangle(cornerRadius: 4)
+                                .stroke(Color.blue)
+                                .frame(width: 20, height: 20)
+                                .overlay(
+                                    Image(systemName:"clock")
+                                        .font(.caption)
+                                        .foregroundColor(.yellow))
+                            Text("14 Minutes and 8 seconds")
+                                .font(.caption)
+                                .foregroundColor(.black)
                            
-                            Button("Hellow") {
-                                /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Content@*/Text("Button")/*@END_MENU_TOKEN@*/
-                            }
-                            .padding()
-                            .background(Color.purple)
-                        
-                            .foregroundColor(.white)
-                            .frame(width: 400, height: 100)
-                
-                        })
-                        .padding(.top,100)
+                            
+                        }.padding(70)
                
             .background(Color(.white).ignoresSafeArea())
             .navigationBarTitle("Home", displayMode: .inline)
             .navigationBarBackButtonHidden(true)
             .listStyle(GroupedListStyle())
+
                     })}
     }
-    }
+}
+
 
 
 struct HomeSwiftUIView_Previews: PreviewProvider {
