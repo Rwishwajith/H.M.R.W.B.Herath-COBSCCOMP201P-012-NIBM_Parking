@@ -13,6 +13,9 @@ struct HomeSwiftUIView: View {
     @State var reservedSlots : [Int] = [3,10]
     @State var vipSlots : [Int] = [16,17,18,29]
     @State var timeReseverd = ""
+    @State var timeremaining = 100
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    
     var body: some View {
         NavigationView{
         ScrollView(.vertical, showsIndicators: false, content:
@@ -83,6 +86,8 @@ struct HomeSwiftUIView: View {
                         }
                         .padding()
                         .padding(.top,30)
+                        .background(Color.blue)
+                        
                         
                         //Legend of the indicatord
                         HStack(spacing: 15)
@@ -97,7 +102,7 @@ struct HomeSwiftUIView: View {
                                 )
                             Text("Reserved")
                                 .font(.caption)
-                                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                                .foregroundColor(.blue)
                             
                             RoundedRectangle(cornerRadius: 4)
                                 .stroke(Color.blue)
@@ -128,6 +133,19 @@ struct HomeSwiftUIView: View {
                             
                         }
                         .padding(.top,20)
+                        HStack(alignment: .top, spacing: 5, content: {
+                           
+                            Button("Hellow") {
+                                /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Content@*/Text("Button")/*@END_MENU_TOKEN@*/
+                            }
+                            .padding()
+                            .background(Color.purple)
+                        
+                            .foregroundColor(.white)
+                            .frame(width: 400, height: 100)
+                
+                        })
+                        .padding(.top,100)
                
             .background(Color(.white).ignoresSafeArea())
             .navigationBarTitle("Home", displayMode: .inline)
@@ -136,6 +154,7 @@ struct HomeSwiftUIView: View {
                     })}
     }
     }
+
 
 struct HomeSwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
@@ -155,7 +174,7 @@ struct SlotViewHome: View
     {
         ZStack{
             RoundedRectangle(cornerRadius: 6)
-                .stroke(reservedSlots.contains(slot) ? Color.red : Color(.black),lineWidth: 2)
+                .stroke(reservedSlots.contains(slot) ? Color.red : Color(.white),lineWidth: 2)
                 .frame(height: 30)
                 .background(
                     selectedSlot.contains(slot) ? Color(.systemBlue) : Color.clear
@@ -165,7 +184,7 @@ struct SlotViewHome: View
             if reservedSlots.contains(slot)
             {
                 Image(systemName: "xmark")
-                    .foregroundColor(.gray)
+                    .foregroundColor(.white)
             }
             if vipSlots.contains(slot)
             {
