@@ -21,13 +21,16 @@ struct WelcomePageSwiftUIView: View {
     @State private var isPresented = false
     var body: some View {
     //AnimatedView()
-        ZStack{
+        VStack{
             Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))
                 .ignoresSafeArea()
             Image("Car")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .padding(.top, 10)
+                .padding(.top, 2)
+            Text("Welcome to NIBM Parking")
+            Text("We can take care of your Parking Problem")
+            
             
             Button("CONTINUE TO THE APP")
                 {self.isPresented.toggle()
@@ -39,7 +42,7 @@ struct WelcomePageSwiftUIView: View {
             .foregroundColor(.white)
             .frame(width: 250, height: 60)
             .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
-            Image("logo").resizable().frame(width: 100, height: 40, alignment: .center )   .padding(.top, 600)
+            Image("logo").resizable().frame(width: 100, height: 40, alignment: .center )   .padding(.top, 200)
 
     }
     
