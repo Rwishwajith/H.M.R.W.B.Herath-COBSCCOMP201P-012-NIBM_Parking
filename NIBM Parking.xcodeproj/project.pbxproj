@@ -44,11 +44,7 @@
 		6944BE722743F87600C20A62 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6944BE702743F87600C20A62 /* SignUpViewController.swift */; };
 		6944BE732743F87600C20A62 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6944BE702743F87600C20A62 /* SignUpViewController.swift */; };
 		6944BE772744298400C20A62 /* sessionControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6944BE762744298400C20A62 /* sessionControl.swift */; };
-		6944BE782744298400C20A62 /* sessionControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6944BE762744298400C20A62 /* sessionControl.swift */; };
-		6944BE792744298400C20A62 /* sessionControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6944BE762744298400C20A62 /* sessionControl.swift */; };
 		6944BE7B2744421C00C20A62 /* inputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6944BE7A2744421C00C20A62 /* inputValidator.swift */; };
-		6944BE7C2744421C00C20A62 /* inputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6944BE7A2744421C00C20A62 /* inputValidator.swift */; };
-		6944BE7D2744421C00C20A62 /* inputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6944BE7A2744421C00C20A62 /* inputValidator.swift */; };
 		69563FB1274D113800F29CA1 /* TabViewSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69563FB0274D113700F29CA1 /* TabViewSwiftUIView.swift */; };
 		69563FB5274D4B4400F29CA1 /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69563FB4274D4B4400F29CA1 /* UserDetails.swift */; };
 		695A36E6274EF0B700E4692C /* NIBM-Parking.json in Resources */ = {isa = PBXBuildFile; fileRef = 695A36E5274EF0B700E4692C /* NIBM-Parking.json */; };
@@ -203,7 +199,6 @@
 			isa = PBXGroup;
 			children = (
 				69A16E65274D4D5A00291634 /* ViewModel */,
-				6944BE742744294700C20A62 /* Util */,
 				6940218E273D2951004615B6 /* Controller */,
 				6940218D273D293D004615B6 /* Model */,
 				6940218C273D292F004615B6 /* Views */,
@@ -278,19 +273,12 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		6944BE742744294700C20A62 /* Util */ = {
-			isa = PBXGroup;
-			children = (
-				6944BE762744298400C20A62 /* sessionControl.swift */,
-				6944BE7A2744421C00C20A62 /* inputValidator.swift */,
-			);
-			path = Util;
-			sourceTree = "<group>";
-		};
 		69A16E65274D4D5A00291634 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				69A16E66274D4D8F00291634 /* UserViewModel.swift */,
+				6944BE762744298400C20A62 /* sessionControl.swift */,
+				6944BE7A2744421C00C20A62 /* inputValidator.swift */,
 				69672F41274F43F6001F6BFD /* AuthViewModel.swift */,
 			);
 			path = ViewModel;
@@ -603,11 +591,9 @@
 				695B859F274829F6002F372F /* SignUpSwiftUIView.swift in Sources */,
 				692797DE273E76D100A80E1F /* EntityModel.swift in Sources */,
 				693D49E027456702005C2448 /* forgetPasswordViewController.swift in Sources */,
-				6944BE782744298400C20A62 /* sessionControl.swift in Sources */,
 				692797D6273E730700A80E1F /* SigninViewController.swift in Sources */,
 				695B85882746A4E6002F372F /* BookingSwiftUIView.swift in Sources */,
 				695B85842746A4CF002F372F /* SettingsSwiftUIView.swift in Sources */,
-				6944BE7C2744421C00C20A62 /* inputValidator.swift in Sources */,
 				693D49EE27457F6A005C2448 /* HomeViewController.swift in Sources */,
 				695B859B27481204002F372F /* LoginSwiftUIView.swift in Sources */,
 				695B85802746A48B002F372F /* ProfileSwiftUIView.swift in Sources */,
@@ -627,11 +613,9 @@
 				695B85A0274829F6002F372F /* SignUpSwiftUIView.swift in Sources */,
 				692797DF273E76D100A80E1F /* EntityModel.swift in Sources */,
 				693D49E127456702005C2448 /* forgetPasswordViewController.swift in Sources */,
-				6944BE792744298400C20A62 /* sessionControl.swift in Sources */,
 				692797D7273E730700A80E1F /* SigninViewController.swift in Sources */,
 				695B85892746A4E6002F372F /* BookingSwiftUIView.swift in Sources */,
 				695B85852746A4CF002F372F /* SettingsSwiftUIView.swift in Sources */,
-				6944BE7D2744421C00C20A62 /* inputValidator.swift in Sources */,
 				693D49EF27457F6A005C2448 /* HomeViewController.swift in Sources */,
 				695B859C27481204002F372F /* LoginSwiftUIView.swift in Sources */,
 				695B85812746A48B002F372F /* ProfileSwiftUIView.swift in Sources */,

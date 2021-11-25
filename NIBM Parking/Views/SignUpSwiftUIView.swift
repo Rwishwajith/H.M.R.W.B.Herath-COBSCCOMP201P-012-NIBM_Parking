@@ -151,7 +151,7 @@ struct SignUp: View{
                             .foregroundColor(.white)
                             .fontWeight(.bold)
                             .padding(.vertical)
-                            .frame(width: UIScreen.main.bounds.width - 50)
+                            .frame(width: 100, height: 50)
                     }
                     .background(Color(.systemBlue))
                     .cornerRadius(6)

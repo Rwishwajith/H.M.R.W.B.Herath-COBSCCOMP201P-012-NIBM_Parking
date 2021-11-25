@@ -133,8 +133,8 @@ struct Login: View{
             
             HStack(spacing: 5){
                
-                NavigationLink("Don't have an account?", destination: SignUpSwiftUIView())
-                Text("Register now").multilineTextAlignment(.leading)
+                NavigationLink("Don't have an account?", destination: SignUpSwiftUIView()) .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                Text("Register now").multilineTextAlignment(.leading).foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                 
             }.padding(.top, 25)
         }

@@ -20,30 +20,25 @@ struct TabViewSwiftUIView: View {
                 }
                 .tag(0)
            
-            if sessionContrl.userLogingStateGet()
-            {
+            //if sessionContrl.userLogingStateGet(){
                     BookingSwiftUIView()
-                        .onAppear{
-                            sessionContrl.userDataRetrive()
-                        }
                         .tabItem {
                             Image(systemName:"p.square.fill")
                             Text("Booking")
                             
                         }
-                }
+                        .tag(1)
+                /*}
             else{
              LoginSwiftUIView()
-                .onAppear()
                     .tabItem {
                         Image(systemName:"p.square.fill")
                         Text("Booking")
                         
                     }
-                    .tag(1)
-            }
-            if sessionContrl.userLogingStateGet()
-            {
+                    
+            }*/
+           // if sessionContrl.userLogingStateGet(){
                 SettingsSwiftUIView()
                     .tabItem {
                         Image(systemName:"gear")
@@ -51,9 +46,8 @@ struct TabViewSwiftUIView: View {
                         
                     }
                     .tag(2)
-            }
-            else
-            {
+            /*}
+            else{
                 SettingsSwiftUIView()
                     .tabItem {
                         Image(systemName:"gear")
@@ -61,7 +55,7 @@ struct TabViewSwiftUIView: View {
                         
                     }
                     .tag(2)
-            }
+            }*/
             
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)

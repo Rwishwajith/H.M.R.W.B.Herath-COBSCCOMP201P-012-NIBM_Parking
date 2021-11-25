@@ -19,6 +19,7 @@ struct SettingsSwiftUIView: View {
     @State private var willMoveToNextScreen = false
     @State private var action: Int? = 0
     @ScaledMetric var size: CGFloat = 1
+    @EnvironmentObject var viewModel: AuthViewModel
     @State var status = UserDefaults.standard.value(forKey: "IS_LOGGED") as? Bool ?? false
     let sessionContrl = sessionControl()
     @ObservedObject var model = UserViewModel()

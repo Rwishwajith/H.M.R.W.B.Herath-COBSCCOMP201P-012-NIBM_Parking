@@ -13,6 +13,7 @@ struct BookingSwiftUIView: View {
     @State var reservedSlots : [Int] = [3,10]
     @State var vipSlots : [Int] = [16,17,18,29]
     @State var timeReseverd = ""
+    let sessionContrl = sessionControl()
 
     var body: some View {
         NavigationView{
