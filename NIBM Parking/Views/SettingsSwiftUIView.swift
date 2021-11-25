@@ -26,7 +26,7 @@ struct SettingsSwiftUIView: View {
         NavigationView
         {
             Form {
-                Section(header: Text("Personal Information"))
+                Section(header: Text("Personal Information").foregroundColor(.black))
                     {
                     List(model.list){
                         item in
@@ -41,16 +41,16 @@ struct SettingsSwiftUIView: View {
                             Divider()
                             Label(item.VehicleNumber, systemImage: "car.fill")
                             Divider()
-            
                         }
                             
-                }.onAppear()
+                    }.foregroundColor(.blue)
+                    .onAppear()
                 {
                     self.model.getdatafromFireStore()
                 }
                 }
-                Section(header: Text("Other"))
-                    {
+                Section(header: Text("Other").foregroundColor(.black))
+                {
                         NavigationLink(destination:LoginSwiftUIView()) {
                                 Text("Sign Out")
                                     .foregroundColor(.blue)

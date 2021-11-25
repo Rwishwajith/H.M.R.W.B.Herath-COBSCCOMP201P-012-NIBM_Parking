@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct TabViewSwiftUIView: View {
-
     @State var selectedTab: Int = 0
-
+    let sessionContrl = sessionControl()
     var body: some View {
         TabView(selection: $selectedTab)
         {
@@ -21,7 +20,6 @@ struct TabViewSwiftUIView: View {
                 }
                 .tag(0)
            
-            
             BookingSwiftUIView()
                 .tabItem {
                     Image(systemName:"p.square.fill")
