@@ -20,20 +20,49 @@ struct TabViewSwiftUIView: View {
                 }
                 .tag(0)
            
-            BookingSwiftUIView()
-                .tabItem {
-                    Image(systemName:"p.square.fill")
-                    Text("Booking")
-                    
+            if sessionContrl.userLogingStateGet()
+            {
+                    BookingSwiftUIView()
+                        .onAppear{
+                            sessionContrl.userDataRetrive()
+                        }
+                        .tabItem {
+                            Image(systemName:"p.square.fill")
+                            Text("Booking")
+                            
+                        }
                 }
-                .tag(1)
-            SettingsSwiftUIView()
-                .tabItem {
-                    Image(systemName:"gear")
-                    Text("Settings")
-                    
-                }
-                .tag(2)
+            else{
+             LoginSwiftUIView()
+                .onAppear()
+                    .tabItem {
+                        Image(systemName:"p.square.fill")
+                        Text("Booking")
+                        
+                    }
+                    .tag(1)
+            }
+            if sessionContrl.userLogingStateGet()
+            {
+                SettingsSwiftUIView()
+                    .tabItem {
+                        Image(systemName:"gear")
+                        Text("Settings")
+                        
+                    }
+                    .tag(2)
+            }
+            else
+            {
+                SettingsSwiftUIView()
+                    .tabItem {
+                        Image(systemName:"gear")
+                        Text("Settings")
+                        
+                    }
+                    .tag(2)
+            }
+            
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }

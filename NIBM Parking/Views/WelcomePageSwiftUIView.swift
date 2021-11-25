@@ -27,13 +27,13 @@ struct WelcomePageSwiftUIView: View {
             Image("Car")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .padding(.top)
+                .padding(.top, 10)
             
             Button("CONTINUE TO THE APP")
                 {self.isPresented.toggle()
                 
             }
-            .padding(.bottom, -500)
+            .padding(.top)
             .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
             .fullScreenCover(isPresented: $isPresented, content : FullScreenModalView.init)
             .foregroundColor(.white)
