@@ -20,14 +20,21 @@ struct FullScreenModalView : View {
 struct WelcomePageSwiftUIView: View {
     @State private var isPresented = false
     var body: some View {
-    // AnimatedView()
+    //AnimatedView()
         ZStack{
-            Color(#colorLiteral(red: 0.476841867, green: 0.5048075914, blue: 1, alpha: 1))
+            Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))
                 .ignoresSafeArea()
+            Image("Car")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .padding(.top)
+            
             Button("CONTINUE TO THE APP")
                 {self.isPresented.toggle()
                 
             }
+            .padding(.bottom, -500)
+            .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
             .fullScreenCover(isPresented: $isPresented, content : FullScreenModalView.init)
             .foregroundColor(.white)
             .frame(width: 250, height: 60)
@@ -43,6 +50,7 @@ struct WelcomePageSwiftUIView_Previews: PreviewProvider {
         WelcomePageSwiftUIView()
     }
 }
+
 /*struct AnimatedView: UIViewRepresentable
 {
     func makeUIView(context: Context) -> some AnimationView
@@ -55,4 +63,6 @@ struct WelcomePageSwiftUIView_Previews: PreviewProvider {
     func updateUIView(_ uiView: AnimationView, context: Context) {
         //
     }
-}*/
+}
+*/
+
